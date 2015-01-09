@@ -1,4 +1,5 @@
 site_name: Red Book Connect Docs
 pages:
 - [ index.md, Home ]
+- [ README.md, hi ]
 - [ help.md, Help ]
