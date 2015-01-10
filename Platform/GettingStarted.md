@@ -1,6 +1,15 @@
 #Overview
 
-The Redbook Connect Cloud solution is a cloud service responsible for managing persistent data on behalf of Red Book Connect systems through Restful [APIs](https://api.redbookcloud.com/swagger-ui/index.html). Redbook Connect's Cloud solution and tools integrates with your business data and different cloud data centers real time. The Platform provides the ability to receive live data for every area of your business everywhere and anytime,  The service promotes actionable insight to deliver value by providing customization, mobility, real time data, and security.
+
+BODHI: an Internet-of Things (IoT) Platform-as-a-Service (PaaS) and Software as a Service (SaaS) for sales, inventory, labor, sensor, social data and applications, specific to the operation of restaurant and other service based industries such as retail and hospitality. 
+
+Bodhi integrates with in-store, near-store, above-store systems and other internet based services to deliver real time information, analytics and insight to your users. 
+
+Bodhi delivers a fully extensible, runtime data model with automatic API creation and self generating documentation.
+
+Bodhi provides the software tools and cloud services fro developers (IT, internal and ISV), to build engaging mobile apps for your business needs to deepen understanding of business activity, strengthen customer engagement and help employees do more. 
+
+The Redbook Connect Cloud solution is a cloud service responsible for managing persistent data on behalf of Red Book Connect through Restful [APIs](https://api.redbookcloud.com/swagger-ui/index.html). Red Book Connect's Cloud solution and tools integrates with your business data and different cloud data centers real time. The Platform provides the ability to receive live data for every area of your business everywhere and anytime,  The service promotes actionable insight to deliver value by providing customization, mobility, real time data, and security.
 
 ##### What is a Namespace? 
 A namespace is your secured storage location of Red book Connect’s cloud solution for your business.
