@@ -1,5 +1,4 @@
-Platform Docs
+Writing Agent Apps
 =====================
-
 
 

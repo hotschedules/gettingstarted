@@ -1,5 +1,3 @@
-Platform Docs
+Agent
 =====================
-
-
 
