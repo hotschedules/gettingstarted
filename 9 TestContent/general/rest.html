@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./start.html">Getting Started</a></li>        
+      
+               <li><a class='docnav' href="./rest.html">Overview</a></li>        
+      
+               <li><a class='docnav' href="./Users_Profiles.html">Users and Profiles</a></li>        
+      
+    
+    </ul>
+            </div>        
+        </div>
+        <div class="col-md-7">
+              <h1 id="rest-api">REST API</h1>
+<p>The REST API lets you interact with RBC Cloud from anything that can send an HTTP request. There are many things you can do with the REST API. For example:</p>
+<ul>
+<li>A mobile website can access RBC data from Javascript.</li>
+<li>A webserver can show data from RBC on a website.</li>
+<li>You can upload large amounts of data that will later be consumed in a mobile app.</li>
+<li>You can export all of your data if you no longer want to use RBC.</li>
+<li>You can download recent data to run your own custom analytics.</li>
+<li>Applications written in any programming language can interact with data in the RBC Cloud.</li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>RBC Cloud stores data in the form of <strong>Types</strong>, which are JSON-like field and value pairs. Types are analogous to structures in programming languages that associate keys with values (e.g. dictionaries, hashes, maps, and associative arrays). RBC Cloud stores all Types in <strong>Collections</strong>. A Collection is a group of related Types that have a set of shared common indexes. Collections are analogous to a table in relational databases.</p>
+<p>All API access is over HTTPS, and accessed via the <a href="https://api.rbcplatform.com">https://api.rbcplatform.com</a> domain. All API requests must include the tenant name or namespace in the URL before referencing the resource type and any qualifiers.</p>
+<h2 id="request-format">Request Format</h2>
+<p>For POST and PUT requests, the request body must be JSON, with the Content-Type header set to application/json.</p>
+<p>Authentication is achieved via HTTP headers. In the current version of the API you must  authenticate your REST API requests using basic HTTP authentication with Base 64 encoded strings. For example, to retrieve an object you could set the URL using your RBC credentials in the following format:  </p>
+<p><code>var auth   = &quot;Basic &quot; + new Buffer(userid + &quot;:&quot; + password).toString(&quot;base64&quot;);</code></p>
+<h2 id="response-format">Response Format</h2>
+<p>The response format for all requests is a JSON object.</p>
+<p>Whether a request succeeded is indicated by the HTTP status code. A 2xx status code indicates success, whereas a 4xx status code indicates failure. When a request fails, the response body is still JSON, but always contains the fields code and error which you can inspect to use for debugging. </p>
+<h2 id="working-with-types">Working with Types</h2>
+<table class="table">
+<thead>
+<tr>
+<th>Functionality</th>
+<th>HTTP Verb</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retrieve a type</td>
+<td>GET</td>
+<td>/namespace/resources/<resourceName>/<objectId></td>
+</tr>
+<tr>
+<td>Create a type</td>
+<td>POST</td>
+<td>/namespace/resources/<resourceName>/<objectId></td>
+</tr>
+<tr>
+<td>Update a whole type</td>
+<td>PUT</td>
+<td>/namespace/resources/<resourceName>/<objectId></td>
+</tr>
+<tr>
+<td>Update a type</td>
+<td>PATCH</td>
+<td>/namespace/resources/<resourceName>/<objectId></td>
+</tr>
+<tr>
+<td>Delete a type</td>
+<td>DELETE</td>
+<td>/namespace/resources/<resourceName>/<objectId> </td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

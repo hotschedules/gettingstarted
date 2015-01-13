@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="contacts-module-reference">Contacts Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>This module provides the access to contacts list from address book. Developer
+can receive contacts, create, update and delete contact item.</p>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>contactField</code> object</li>
+<li><code>contactAddress</code> object</li>
+<li><code>contactName</code> object</li>
+<li><code>contactInfo</code> object</li>
+<li><code>find</code> function</li>
+<li><code>findById</code> function</li>
+<li><code>create</code> function</li>
+<li><code>update</code> function</li>
+<li><code>delete</code> function</li>
+</ul>
+<h2 id="objects">Objects</h2>
+<h3 id="contactfield">contactField</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This object contains information about the field of contact, such as phone
+number or email.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_type_required</li>
+</ul>
+<p>A String value. The type of field.</p>
+<ul>
+<li>_value_required</li>
+</ul>
+<p>A String value. The value of field.</p>
+<h3 id="contactaddress">contactAddress</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This Object contains information about the address record of contact.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_type_required</li>
+</ul>
+<p>A String value. The type of address.</p>
+<ul>
+<li>_formatted_optional</li>
+</ul>
+<p>A String value. Formatted address.</p>
+<ul>
+<li>_streetAddress_optional</li>
+</ul>
+<p>A String value. The street name.</p>
+<ul>
+<li>_locality_optional</li>
+</ul>
+<p>A String value. The city name.</p>
+<ul>
+<li>_region_optional</li>
+</ul>
+<p>A String value. The region.</p>
+<ul>
+<li>_postalCode_optional</li>
+</ul>
+<p>A String value. The postal code.</p>
+<ul>
+<li>_country_optional</li>
+</ul>
+<p>A String value. The country.</p>
+<h3 id="contactname">contactName</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This Object contains information about the name of contact.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_formatted_required</li>
+</ul>
+<p>A String value. Formatted dispay name.</p>
+<ul>
+<li>_familyName_optional</li>
+</ul>
+<p>A String value. The last name.</p>
+<ul>
+<li>_givenName_optional</li>
+</ul>
+<p>A String value. The first name.</p>
+<ul>
+<li>_middleName_optional</li>
+</ul>
+<p>A String value. The middle name.</p>
+<ul>
+<li>_honorificPrefix_optional</li>
+</ul>
+<p>A String value. The prefix (&quot;Sir&quot; &quot;Duke&quot; &quot;General&quot;).</p>
+<ul>
+<li>_honorificSuffix_optional</li>
+</ul>
+<p>A String value. The suffix (&quot;Jr.&quot; &quot;Sr.&quot; &quot;III&quot;).</p>
+<h3 id="contactinfo">contactInfo</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This Object contains information about the contact item.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_id_required</li>
+</ul>
+<p>A String value. The identifier of contact.</p>
+<ul>
+<li>_raw_id_optional</li>
+</ul>
+<p>A String value. Optional identifier of contact. Used in android.</p>
+<ul>
+<li>_displayName_required</li>
+</ul>
+<p>A String value. Formatted dispay name.</p>
+<ul>
+<li>_name_required</li>
+</ul>
+<p>contactName object. Contains full information about the contact&#39;s name.</p>
+<ul>
+<li>_nickname_optional</li>
+</ul>
+<p>A String value. The nickname of contact.</p>
+<ul>
+<li>_phoneNumbers_optional</li>
+</ul>
+<p>Array of contactField objects. The list of phone numbers.</p>
+<ul>
+<li>_emails_optional</li>
+</ul>
+<p>Array of contactField objects. The list of emails.</p>
+<ul>
+<li>_addresses_optional</li>
+</ul>
+<p>Array of contactAddress objects. The list of addresses associated with
+contact.</p>
+<ul>
+<li>_birthday_optional</li>
+</ul>
+<p>A Date value. The birthday of contact.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="find">find</h3>
+<p><code>contacts.find( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a list of contacts.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _filter_</code></pre>
+<p>A String value. If a filter is specified, then return only contacts with a
+name containing the string. By default this property is <strong>null</strong></p>
+<pre><code>* _limit_</code></pre>
+<p>An Interger value. If limit is specified, the return only &quot;limit&quot; contacts. By
+default this property is <strong>null</strong>.</p>
+<pre><code>* _offset_</code></pre>
+<p>An Interger value. If offset is specified, the return contacts with index
+started from &quot;offset&quot;. By default this property is <strong>null</strong>.</p>
+<pre><code>* _getTotalCount_</code></pre>
+<p>A Boolean value. Returns total count of contacts with specified <em>filter</em>. By
+default this property is <strong>true</strong></p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _contacts_ \- The list of contactInfo objects. (Array of Object)
+* _totalCount_ \- The total count of contacts. Returns only if _getTotalCount_ is **true** (Boolean)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>contacts.find( {}, function(info) {  
+    alert(&quot;Contacts count: &quot;+info.contacts.length);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="findbyid">findById</h3>
+<p><code>contacts.findById( contactId, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the contact with specified id.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_contactId_required</li>
+</ul>
+<p>A String value. The identifier of contact.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _contacts_ \- The list of contactInfo objects with one element. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>contacts.findById( &quot;32&quot;, function(info) {  
+    alert(&quot;Found contacts count: &quot;+info.contacts.length);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="create">create</h3>
+<p><code>contacts.create( contact, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Adds new contact to address book.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_contact_required</li>
+</ul>
+<p>contactInfo object. Contains information about new contact.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _contacts_ \- The list of contactInfo objects with one element. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var contact = {  
+    name: {  
+        givenName: &quot;Test&quot;,  
+        familyName: &quot;User&quot;},  
+    emails: [{  
+        type: &quot;Work&quot;,  
+        value: &quot;test@test.com&quot;}]};  
+contacts.create( contact, function(info) {  
+    alert(&quot;Contact added with id: &quot;+info.contacts[0].id);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="update">update</h3>
+<p><code>contacts.update( contact, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Updates information for exist contact in address book.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_contact_required</li>
+</ul>
+<p>contactInfo object. Contains updated information for contact. Must contain id
+and raw_id (if exist).</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong></p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var contact = {  
+    id: &quot;35&quot;,  
+    name: {  
+        givenName: &quot;Test1&quot;,  
+        familyName: &quot;User1&quot;},  
+    emails: [{  
+        type: &quot;Work&quot;,  
+        value: &quot;test1@test.com&quot;}]};  
+contacts.update( contact, function(info) {  
+    alert(&quot;Contact information updated.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="delete">delete</h3>
+<p><code>contacts.delete( contact, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Deletes exist contact from address book.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_contact_required</li>
+</ul>
+<p>contactInfo object. Contains information for contact. Must contain id and
+raw_id (if exist). Other fields ignored.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong></p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var contact = { id: &quot;35&quot; };  
+contacts.delete( contact, function(info) {  
+    alert(&quot;Contact removed.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<ul>
+<li><a href="../index.html">Index</a></li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-06-14)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

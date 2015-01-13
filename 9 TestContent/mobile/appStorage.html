@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="app-storage-module-reference">App Storage Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>This module provides the ability to store any kind of data.<br>Developer can add data or strings manually or load files from server.<br>Also some modules are supporting to work with <strong>App Storage</strong>. For example
+developer can save photo to <strong>App Storage</strong> and then send it as attachment via
+email.<br>This is simple key-value storage. But value can be a string, a binary data and
+a file. The length of value limited only by the size of free memory.</p>
+<h4 id="key-naming-convention">Key naming convention</h4>
+<ol>
+<li>Use a delimiter &quot;/&quot; for separating logic parts of keys.</li>
+<li>All modules that store data in <strong>App Storage</strong> use the keys: module_name/generated_id</li>
+<li>In order not to damage the data of other embedded applications use keys with prefix app/[your_app_name]</li>
+</ol>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>put</code> function</li>
+<li><code>getAllKeys</code> function</li>
+<li><code>get</code> function</li>
+<li><code>delete</code> function</li>
+<li><code>deleteAll</code> function</li>
+<li><code>putString</code> function</li>
+<li><code>getString</code> function</li>
+<li><code>getStrings</code> function</li>
+<li><code>putContent</code> function</li>
+<li><code>loadContent</code> function</li>
+<li><code>getContent</code> function</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h3 id="put">put</h3>
+<p><code>appStorage.put( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>With this function developer can save strings, data or file for the key.<br>Developer can use this function in three cases:</p>
+<ol>
+<li><strong>Save string data</strong></li>
+</ol>
+<p>For it developer must set key and value properties for <em>options</em></p>
+<ol>
+<li><strong>Save binary data</strong></li>
+</ol>
+<p>For it developer must set key, contentType and data properties for <em>options</em></p>
+<ol>
+<li><strong>Load data from server</strong></li>
+</ol>
+<p>For it developer must set key, url and contentType (optional) properties for
+<em>options</em></p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _key_required</code></pre>
+<p>A String value. The key under which data will be stored.</p>
+<pre><code>* _value_</code></pre>
+<p>A String value. String data to save.</p>
+<pre><code>* _contentType_</code></pre>
+<p>A String value. Content Type of data.</p>
+<pre><code>* _data_</code></pre>
+<p>A String value. String data in base64 to save.</p>
+<pre><code>* _url_</code></pre>
+<p>A String value. Link to the file on remote server.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains keys:</p>
+<pre><code>* _key_ \- The key in accordance with which the data was saved. (String)
+* _contentType_ \- Content Type of the data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.put( {key:&quot;app/test/key1&quot;, value:&quot;Test values&quot;}  
+function(info) {  
+    alert(info.key + &quot;saved&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getallkeys">getAllKeys</h3>
+<p><code>appStorage.getAllKeys( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns all keys which respond to options.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _prefix_</code></pre>
+<p>A String value. The key must contains prefix in the start of string.</p>
+<pre><code>* _contentType_</code></pre>
+<p>A String value. Content Type of data must be equal to this.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains &quot;keys&quot; array with objects with:</p>
+<pre><code>* _key_ \- The key of record. (String)
+* _contentType_ \- Content Type of the data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.getAllKeys( {prefix:&quot;app/test/&quot;}  
+function(info) {  
+    for (var i = 0; i &lt; info.keys.length; i++) {  
+        alert(&quot;Key: &quot; \+ info.keys[i].key);  
+    }  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="get">get</h3>
+<p><code>appStorage.get( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Return value or data in base64 for specified keys</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _key_</code></pre>
+<p>A String value. The key for which you want to find a record.</p>
+<pre><code>* _keys_</code></pre>
+<p>A Array of Strings value. Use this property to select multiple records.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains &quot;values&quot; array with objects with:</p>
+<pre><code>* _key_ \- The key of record. (String)
+* _contentType_ \- Content Type of the data. (String)
+* _value_ \- This property returned if record contains string value. (String)
+* _data_ \- data in base64 returned if record contains binary data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.get( {key:&quot;app/test/key1&quot;}  
+function(info) {  
+    for (var i = 0; i &lt; info.values.length; i++) {  
+        alert(&quot;Found data for key: &quot; \+ info.values[i].key);  
+    }  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="delete">delete</h3>
+<p><code>appStorage.delete( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Delete records for specified keys</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _key_</code></pre>
+<p>A String value. Delete records with key.</p>
+<pre><code>* _keys_</code></pre>
+<p>A Array of Strings value. Use this property to delete multiple records.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always null.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.delete( {key:&quot;app/test/key1&quot;}  
+function(info) {  
+    alert(&quot;Key removed&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="deleteall">deleteAll</h3>
+<p><code>appStorage.deleteAll( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Delete all keys which respond to options.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _prefix_</code></pre>
+<p>A String value. The key must contains prefix in the start of string.</p>
+<pre><code>* _contentType_</code></pre>
+<p>A String value. Content Type of data must be equal to this.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always null.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.deleteAll( {prefix:&quot;app/test/&quot;}  
+function(info) {  
+    alert(&quot;All keys removed&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="putstring">putString</h3>
+<p><code>appStorage.putString( key, value, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>This function use put to add string value.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_key_required</li>
+</ul>
+<p>A String value. The key under which string value will be stored.</p>
+<ul>
+<li>_value_required</li>
+</ul>
+<p>A String value. String data to save.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains keys:</p>
+<pre><code>* _key_ \- The key in accordance with which the data was saved. (String)
+* _contentType_ \- Content Type of the data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.putString( &quot;app/test/key1&quot;, &quot;Test values&quot;,  
+function(info) {  
+    alert(info.key + &quot;saved&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getstring">getString</h3>
+<p><code>appStorage.getString( key, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>This function use get to get string value.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_key_required</li>
+</ul>
+<p>A String value. The key for which you want to find a record.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains &quot;values&quot; array with objects with:</p>
+<pre><code>* _key_ \- The key of record. (String)
+* _contentType_ \- Content Type of the data. (String)
+* _value_ \- This property returned if record contains string value. (String)
+* _data_ \- data in base64 returned if record contains binary data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.getString( &quot;app/test/key1&quot;,  
+function(info) {  
+    for (var i = 0; i &lt; info.values.length; i++) {  
+        alert(&quot;Found data for key: &quot; \+ info.values[i].key);  
+    }  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getstrings">getStrings</h3>
+<p><code>appStorage.getStrings( key, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>This function use get to get multiple string values.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_keys_required</li>
+</ul>
+<p>A Array of Strings value. Use this property to select multiple records.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains &quot;values&quot; array with objects with:</p>
+<pre><code>* _key_ \- The key of record. (String)
+* _contentType_ \- Content Type of the data. (String)
+* _value_ \- This property returned if record contains string value. (String)
+* _data_ \- data in base64 returned if record contains binary data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.getStrings( [&quot;app/test/key1&quot;, &quot;app/test/key2&quot;],  
+function(info) {  
+    for (var i = 0; i &lt; info.values.length; i++) {  
+        alert(&quot;Found data for key: &quot; \+ info.values[i].key);  
+    }  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="putcontent">putContent</h3>
+<p><code>appStorage.putContent( key, contentType, data, successCallback, errorCallback
+)</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>This function use put to add binary data.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_key_required</li>
+</ul>
+<p>A String value. The key under which data will be stored.</p>
+<ul>
+<li>_contentType_required</li>
+</ul>
+<p>A String value. Content Type of data.</p>
+<ul>
+<li>_data_required</li>
+</ul>
+<p>A String value. String data in base64 to save.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains keys:</p>
+<pre><code>* _key_ \- The key in accordance with which the data was saved. (String)
+* _contentType_ \- Content Type of the data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.putContent( &quot;app/test/key2&quot;, &quot;text/plain&quot;, &quot;VGVzdA==&quot;,  
+function(info) {  
+    alert(info.key + &quot;saved&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="loadcontent">loadContent</h3>
+<p><code>appStorage.loadContent( key, url, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>This function use put to load data from remote server.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_key_required</li>
+</ul>
+<p>A String value. The key under which data will be stored.</p>
+<ul>
+<li>_url_required</li>
+</ul>
+<p>A String value. Link to the file on remote server.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains keys:</p>
+<pre><code>* _key_ \- The key in accordance with which the data was saved. (String)
+* _contentType_ \- Content Type of the data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.loadContent( &quot;app/test/key3&quot;, &quot;http://www.company.com/file_url&quot;,  
+function(info) {  
+    alert(info.key + &quot;saved&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getcontent">getContent</h3>
+<p><code>appStorage.getContent( key, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>This function use get to get binary data in base64.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_key_required</li>
+</ul>
+<p>A String value. The key for which you want to find a record.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains &quot;values&quot; array with objects with:</p>
+<pre><code>* _key_ \- The key of record. (String)
+* _contentType_ \- Content Type of the data. (String)
+* _value_ \- This property returned if record contains string value. (String)
+* _data_ \- data in base64 returned if record contains binary data. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>appStorage.getContent( &quot;app/test/key3&quot;,  
+function(info) {  
+    for (var i = 0; i &lt; info.values.length; i++) {  
+        alert(&quot;Found data for key: &quot; \+ info.values[i].key);  
+    }  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<ul>
+<li><a href="../index.html">Index</a></li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-06-11)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

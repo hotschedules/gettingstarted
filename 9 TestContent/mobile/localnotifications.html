@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="local-notifications-module-reference">Local Notifications Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>This module used for showing scheduled notification for user when the
+application is in background.<br>For example developer can schedule notification about meeting or birthday.<br>Different platforms used different methods for it:</p>
+<ul>
+<li><strong>On iOS</strong> used local notifications</li>
+<li><strong>On Android</strong> used notifications</li>
+<li><strong>On Windows Phone</strong> used toasts</li>
+</ul>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>notification</code> object</li>
+<li><code>add</code> function</li>
+<li><code>cancel</code> function</li>
+<li><code>cancelAll</code> function</li>
+<li><code>getScheduled</code> function</li>
+<li><code>isScheduled</code> function</li>
+<li><code>received</code> function</li>
+<li><code>localnotifications.received</code> event</li>
+</ul>
+<h2 id="objects">Objects</h2>
+<h3 id="notification">notification</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This Object contains information about notification. It is simple Object value
+with predefined keys.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_id_required</li>
+</ul>
+<p>The property with a String value. The identifier of notification.</p>
+<ul>
+<li>_title_required</li>
+</ul>
+<p>The property with a String value. The title of notification.</p>
+<ul>
+<li>_message_optional</li>
+</ul>
+<p>The property with a String value. The message of notification.</p>
+<ul>
+<li>_badge_optional</li>
+</ul>
+<p>The property with a Number value. This value will be displayed on application
+icon when notification will be shown.</p>
+<ul>
+<li>_fireDate_required</li>
+</ul>
+<p>The property with a Date value. The date when notification will be shown.</p>
+<ul>
+<li>_repeat_optional</li>
+</ul>
+<p>The property with a String value. Repeat interval. The value can be one of:
+secondly, minutely, hourly, daily, weekly, monthly, yearly</p>
+<ul>
+<li>_otherInfo_optional</li>
+</ul>
+<p>The property with a Object value. Developer defined data.</p>
+<h4 id="sample">Sample</h4>
+<p><code>var notification = {id: &quot;1&quot;,  
+        title: &quot;Birthday&quot;,  
+        message: &quot;Today&#39;s Birthdays Alexey&quot;,  
+        badge: 1,  
+        fireDate: new Date(2014, 7, 25),  
+        repeat: &quot;yearly&quot;,  
+        otherInfo: null};</code>  </p>
+<h2 id="functions">Functions</h2>
+<h3 id="add">add</h3>
+<p><code>notifications.local.add( notification, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Schedule new notification. If notification with id already exist it will be
+rewritten.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_notification_required</li>
+</ul>
+<p>The parameter with information about new notification. See notification for
+more info.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always null.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>notifications.local.add( newNotification, function () {  
+    alert(&quot;Notification scheduled&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="cancel">cancel</h3>
+<p><code>notifications.local.cancel( notification, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Cancel scheduled notification.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_notification_required</li>
+</ul>
+<p>The parameter with information about new notification. See notification for
+more info but really used only <em>id</em> key.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always null.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>notifications.local.cancel( existNotification, function () {  
+    alert(&quot;Notification cancelled&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="cancelall">cancelAll</h3>
+<p><code>notifications.local.cancelAll( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Cancel all scheduled notifications.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always null.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>notifications.local.cancelAll( function () {  
+    alert(&quot;All notifications cancelled&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getscheduled">getScheduled</h3>
+<p><code>notifications.local.getScheduled( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Return all scheduled notifications.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _notifications_ \- The Array with notification objects</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>notifications.local.getScheduled( function (info) {  
+    var text = &quot;&quot;;  
+    for (var i = 0; i &lt; info.notifications.length; i++) {  
+        text += &quot; &quot; \+ info.notifications[i].id;  
+    }  
+    alert(&quot;All notifications:&quot;+text);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="isscheduled">isScheduled</h3>
+<p><code>notifications.local.isScheduled(notification, successCallback, errorCallback
+)</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Test scheduled notification.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_notification_required</li>
+</ul>
+<p>The parameter with information about new notification. See notification for
+more info but really used only <em>id</em> key.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _notification_ \- The notification object which function received as parameter.
+* _isScheduled_ \- The Boolean object. _true_ is scheduled instead _false_</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>notifications.local.isScheduled( existNotification, function (info) {  
+    if (info.isScheduled)  
+        alert(&quot;Notification Scheduled&quot;);  
+    else  
+        alert(&quot;Notification doesn&#39;t Scheduled&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="received">received</h3>
+<p><code>notifications.local.received( callback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Register <em>callback</em> as observer for localnotifications.received event.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_callback_required</li>
+</ul>
+<p>Callback which execute when application oppened by notification.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em>this</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>notifications.local.received( function(info) {  
+    alert(&quot;Notification recevied: &quot; \+ info.notification.id);  
+});</code>  </p>
+<h2 id="events">Events</h2>
+<h3 id="localnotifications-received">localnotifications.received</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Event received when application oppened by notification</p>
+<ul>
+<li><a href="../index.html">Index</a></li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-06-05)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

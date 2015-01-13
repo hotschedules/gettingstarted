@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="device-module-reference">Device Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>Getting basic information about device.<br>Also provides events about application state.</p>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>device.TYPES</code> constant</li>
+<li><code>model</code> property</li>
+<li><code>platform</code> property</li>
+<li><code>guid</code> property</li>
+<li><code>osVersion</code> property</li>
+<li><code>name</code> property</li>
+<li><code>type</code> property</li>
+<li><code>ready</code> function</li>
+<li><code>pause</code> function</li>
+<li><code>resume</code> function</li>
+<li><code>device.pause</code> event</li>
+<li><code>device.resume</code> event</li>
+</ul>
+<h2 id="constants">Constants</h2>
+<h3 id="device-types">device.TYPES</h3>
+<h4 id="discussion">Discussion</h4>
+<p>The enum contains variants of device types.</p>
+<ul>
+<li><em>device.TYPES.PHONE</em></li>
+</ul>
+<p>Device is a phone.</p>
+<ul>
+<li><em>device.TYPES.TABLET</em></li>
+</ul>
+<p>Device is a tablet.</p>
+<h2 id="properties">Properties</h2>
+<h3 id="model">model</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Device model. For example iPhone6,1 or iPhone6,2 for iPhone 5s</p>
+<h4 id="sample">Sample</h4>
+<p><code>var deviceModel = device.model;</code>  </p>
+<h3 id="platform">platform</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Device Platform. Supported values:</p>
+<ul>
+<li>iOS</li>
+<li>Android</li>
+<li>WP</li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var devicePlatform = device.platform;</code>  </p>
+<h3 id="guid">guid</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Device identifier</p>
+<h4 id="sample">Sample</h4>
+<p><code>var deviceId = device.guid;</code>  </p>
+<h3 id="osversion">osVersion</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Device OS version</p>
+<h4 id="sample">Sample</h4>
+<p><code>var osVersion = device.osVersion;</code>  </p>
+<h3 id="name">name</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Device Name</p>
+<h4 id="sample">Sample</h4>
+<p><code>var deviceName = device.name;</code>  </p>
+<h3 id="type">type</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Device Type. See device.TYPES for more info.</p>
+<h4 id="sample">Sample</h4>
+<p><code>var deviceType = device.type;</code>  </p>
+<h2 id="functions">Functions</h2>
+<h3 id="ready">ready</h3>
+<p><code>device.ready( callback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Add <em>callback</em> which will be called after full JavaScript kernel and modules
+initialization.<br>If call this function after initialization end <em>callback</em> will be called
+immediately.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_callback_required</li>
+</ul>
+<p>Callback which execute after JavaScript kernel initialization.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em>this</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>device.ready( function() {  
+    alert(&quot;Initializtion complete&quot;);  
+});</code>  </p>
+<h3 id="pause">pause</h3>
+<p><code>device.pause( callback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Register <em>callback</em> as observer for device.pause event.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_callback_required</li>
+</ul>
+<p>Callback which execute when application enter to background.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em>this</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>device.pause( function() {  
+    alert(&quot;Application will enter to background&quot;);  
+});</code>  </p>
+<h3 id="resume">resume</h3>
+<p><code>device.resume( callback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Register <em>callback</em> as observer for device.resume event.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_callback_required</li>
+</ul>
+<p>Callback which execute when application return to foreground.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em>this</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>device.resume( function() {  
+    alert(&quot;Application will enter to foreground&quot;);  
+});</code>  </p>
+<h2 id="events">Events</h2>
+<h3 id="device-pause">device.pause</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Event received when application enter to background</p>
+<h3 id="device-resume">device.resume</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Event received when application returned from background</p>
+<ul>
+<li><a href="../index.html">Index</a></li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-08-19)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="authentication-module-reference">Authentication Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>This module is designed to authenticate users.</p>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>supported</code> property</li>
+<li><code>username</code> property</li>
+<li><code>authenticated</code> property</li>
+<li><code>login</code> function</li>
+<li><code>logout</code> function</li>
+<li><code>getCredentialsInfo</code> function</li>
+<li><code>authentication.usernameChanged</code> event</li>
+</ul>
+<h2 id="properties">Properties</h2>
+<h3 id="supported">supported</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Returns whether the device supports authentication.</p>
+<h4 id="sample">Sample</h4>
+<p><code>var supported = authentication.supported;</code>  </p>
+<h3 id="username">username</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Returns current authenticated username or <strong>null</strong>. This property changed when
+authentication.usernameChanged event received.</p>
+<h4 id="sample">Sample</h4>
+<p><code>var username = authentication.username;</code>  </p>
+<h3 id="authenticated">authenticated</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Returns <strong>true</strong> if user already authenticated. Otherwise returns <strong>false</strong>.
+This property changed when authentication.usernameChanged event received.</p>
+<h4 id="sample">Sample</h4>
+<p><code>var isAuthenticated = authentication.authenticated;</code>  </p>
+<h2 id="functions">Functions</h2>
+<h3 id="login">login</h3>
+<p><code>authentication.login( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Tries to login to server with user credentials.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _username_</code></pre>
+<p>A String value. The key must contains string with username.</p>
+<pre><code>* _password_</code></pre>
+<p>A String value. The key must contains string with user password.</p>
+<pre><code>* _remember_</code></pre>
+<p>A Boolean value. If <strong>true</strong> credentials will be saved and will be used after
+application restart.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _username_ \- Authorized username. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var options = {  
+    username: &quot;test_user&quot;,  
+    password: &quot;password&quot;};  
+authentication.login( options, function(info) {  
+    alert(&quot;User (&quot; \+ info.username + &quot;) authenticated.&quot;);  
+}, function (error) {  
+    alert(&quot;Login failed! code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="logout">logout</h3>
+<p><code>authentication.logout( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Logout current authorized user and clear all session cookies.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong>.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>authentication.logout( function(info) {  
+    alert(&quot;Finished.&quot;);  
+}, function (error) {  
+    alert(&quot;Logout failed! code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getcredentialsinfo">getCredentialsInfo</h3>
+<p><code>authentication.getCredentialsInfo( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Gets username and remember flag which used in last successful call of login
+method.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _username_ \- Username which was used in last login. (String)
+* _remember_ \- Last used remember flag state. (Boolean)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>authentication.getCredentialsInfo( function(info) {  
+    alert(&quot;Last username = &quot; \+ info.username + &quot;\n&quot;+  
+         &quot;Last remember&quot; \+ info.remember);  
+}, function (error) {  
+    alert(&quot;Failed! code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h2 id="events">Events</h2>
+<h3 id="authentication-usernamechanged">authentication.usernameChanged</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Event received when current authentication status changed.</p>
+<h4 id="callback-arguments">Callback Arguments</h4>
+<ul>
+<li><p><em>username</em> - Current authenticated username or <strong>null</strong>. (String)</p>
+</li>
+<li><p><a href="../index.html">Index</a></p>
+</li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-08-18)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

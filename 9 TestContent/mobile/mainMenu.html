@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="main-menu-module-reference">Main Menu Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>This module used for working with application main menu. Developer can add and
+remove custom menu items from it.</p>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>menuItem</code> object</li>
+<li><code>updateTitle</code> function</li>
+<li><code>addCustomItem</code> function</li>
+<li><code>removeCustomItem</code> function</li>
+<li><code>removeAllCustomItems</code> function</li>
+<li><code>showMenu</code> function</li>
+<li><code>bounceMenu</code> function</li>
+<li><code>mainMenu.customItemSelected</code> event</li>
+</ul>
+<h2 id="objects">Objects</h2>
+<h3 id="menuitem">menuItem</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This Object contains information about custom menu item.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_id_optional</li>
+</ul>
+<p>The property with a String value. The identifier of the custom menu item.</p>
+<ul>
+<li>_title_required</li>
+</ul>
+<p>The property with a String value. The title of the custom menu item.</p>
+<ul>
+<li>_icon_optional</li>
+</ul>
+<p>The property with a String value. The icon URL of the custom menu item.</p>
+<h4 id="sample">Sample</h4>
+<p><code>var menuItem = {id: &quot;1&quot;,  
+        title: &quot;Favorites&quot;,  
+        icon: &quot;http://server.com/path_to_icon&quot;};</code>  </p>
+<h2 id="functions">Functions</h2>
+<h3 id="updatetitle">updateTitle</h3>
+<p><code>mainMenu.updateTitle( title, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Updates title for the items group in main menu.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_title_required</li>
+</ul>
+<p>A String Value. New title for the items group in main menu.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always null.</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>mainMenu.updateTitle( &quot;Test Application&quot;, function () {  
+    alert(&quot;Title updated&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="addcustomitem">addCustomItem</h3>
+<p><code>mainMenu.addCustomItem( item, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Adds new application custom item to the main menu.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_item_required</li>
+</ul>
+<p>menuItem object. Contains information about new custom menu item. If <em>id</em> is
+not specified it will be generated in application.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _item_ \- The menuItem object. (Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var menuItem = {title: &quot;Favorites&quot;, icon: &quot;http://server.com/path_to_icon&quot;};  
+mainMenu.addCustomItem( item, function(info) {  
+    alert(&quot;Item added with id: &quot;+info.item.id);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="removecustomitem">removeCustomItem</h3>
+<p><code>mainMenu.removeCustomItem( item, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Deletes exist item from the main menu.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_event_required</li>
+</ul>
+<p>menuItem object. Contains information about the custom menu item. Must contain
+id. Other fields ignored.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _item_ \- The menuItem object. (Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var item = { id: &quot;1&quot; };  
+mainMenu.removeCustomItem( item, function(info) {  
+    alert(&quot;Item removed.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="removeallcustomitems">removeAllCustomItems</h3>
+<p><code>mainMenu.removeAllCustomItems( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Deletes all items for the current application from the main menu.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong></p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>mainMenu.removeAllCustomItem( function(info) {  
+    alert(&quot;All Items removed.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="showmenu">showMenu</h3>
+<p><code>mainMenu.showMenu( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Opens the main menu.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong></p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>mainMenu.showMenu( function(info) {  
+    alert(&quot;Menu showed.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="bouncemenu">bounceMenu</h3>
+<p><code>mainMenu.bounceMenu( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Bounces the main menu.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong></p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>mainMenu.bounceMenu( function(info) {  
+    alert(&quot;Menu bounced.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h2 id="events">Events</h2>
+<h3 id="mainmenu-customitemselected">mainMenu.customItemSelected</h3>
+<h4 id="discussion">Discussion</h4>
+<p>Event received when user selected application custom item in the main menu.</p>
+<h4 id="callback-arguments">Callback Arguments</h4>
+<ul>
+<li><p><em>item</em> - The menuItem object. (Object)</p>
+</li>
+<li><p><a href="../index.html">Index</a></p>
+</li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-07-01)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

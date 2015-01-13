@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="calendar-module-reference">Calendar Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>This module provides the access to events in caledar. Developer can receive
+calendars and events list, create and delete event items.</p>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>calendarItem</code> object</li>
+<li><code>recurrenceRuleItem</code> object</li>
+<li><code>eventAlarmItem</code> object</li>
+<li><code>eventItem</code> object</li>
+<li><code>getCalendars</code> function</li>
+<li><code>getCalendarById</code> function</li>
+<li><code>getEvents</code> function</li>
+<li><code>getEventById</code> function</li>
+<li><code>create</code> function</li>
+<li><code>delete</code> function</li>
+</ul>
+<h2 id="objects">Objects</h2>
+<h3 id="calendaritem">calendarItem</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This object contains information about the calendar.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_id_required</li>
+</ul>
+<p>A String value. A unique identifier for the calendar.</p>
+<ul>
+<li>_title_required</li>
+</ul>
+<p>A String value. The title of the calendar.</p>
+<ul>
+<li>_type_optional</li>
+</ul>
+<p>A String value. The type of the calendar. The value can be one of:</p>
+<pre><code>* _local_</code></pre>
+<p>This calendar is sync&#39;d from either Mobile Me or tethered.</p>
+<pre><code>* _calDAV_</code></pre>
+<p>This calendar is from a CalDAV server.</p>
+<pre><code>* _exchange_</code></pre>
+<p>This calendar comes from an Exchange server.</p>
+<pre><code>* _subscription_</code></pre>
+<p>This is a locally subscribed calendar.</p>
+<pre><code>* _birthday_</code></pre>
+<p>This is the built-in birthday calendar.</p>
+<ul>
+<li>_allowsModifications_optional</li>
+</ul>
+<p>A Boolean value. Represents whether developer can modify items in this
+calendar.</p>
+<h3 id="recurrenceruleitem">recurrenceRuleItem</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This object describes the recurrence pattern for a repeating event.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_frequency_required</li>
+</ul>
+<p>A String value. The frequency of a recurrence. The value can be one of:</p>
+<pre><code>* _daily_</code></pre>
+<p>Indicates a daily recurrence rule.</p>
+<pre><code>* _weekly_</code></pre>
+<p>Indicates a weekly recurrence rule.</p>
+<pre><code>* _monthly_</code></pre>
+<p>Indicates a monthly recurrence rule.</p>
+<pre><code>* _yearly_</code></pre>
+<p>Indicates a yearly recurrence rule.</p>
+<ul>
+<li>_interval_optional</li>
+</ul>
+<p>An Integer value. Specifies how often the recurrence rule repeats over the
+unit of time described by the <em>frequency</em>. Not available on android.</p>
+<ul>
+<li>_daysOfTheWeek_optional</li>
+</ul>
+<p>An Array of Strings. Valid for all <em>frequency</em> types except <em>daily</em>. Not
+available on android. The arrai item can be one of:</p>
+<pre><code>* _mo_ \- Monday
+* _tu_ \- Tuesday
+* _we_ \- Wednesday
+* _th_ \- Thursday
+* _fr_ \- Friday
+* _sa_ \- Saturday
+* _su_ \- Sunday</code></pre>
+<ul>
+<li>_daysOfTheMonth_optional</li>
+</ul>
+<p>An Array of Integers ([+/-] 1 to 31). Valid only for <em>monthly</em> <em>frequency</em>.
+Not available on android.</p>
+<ul>
+<li>_monthsOfTheYear_optional</li>
+</ul>
+<p>An Array of Integers (1 to 12). Valid only for <em>yearly</em> <em>frequency</em>. Not
+available on android.</p>
+<ul>
+<li>_weeksOfTheYear_optional</li>
+</ul>
+<p>An Array of Integers ([+/1] 1 to 53). Valid only for <em>yearly</em> <em>frequency</em>. Not
+available on android.</p>
+<ul>
+<li>_daysOfTheYear_optional</li>
+</ul>
+<p>An Array of Integers ([+/1] 1 to 366). Valid only for <em>yearly</em> <em>frequency</em>.
+Not available on android.</p>
+<ul>
+<li>_endDate_optional</li>
+</ul>
+<p>A Date value. Recurrence end with a specific end date.</p>
+<ul>
+<li>_occurrenceCount_optional</li>
+</ul>
+<p>An Interger value. Recurrence end with a maximum occurrence count. Not
+available on android.</p>
+<h3 id="eventalarmitem">eventAlarmItem</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This object represents alarms on an eventItem. An alarm can be relative (e.g.
+15 mins before) or absolute (specific time).</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_date_optional</li>
+</ul>
+<p>A Date value. The date the alarm should fire. Not available on android.</p>
+<ul>
+<li>_offset_optional</li>
+</ul>
+<p>An Integer value. The offset from the event start that the alarm should fire.
+In milliseconds.</p>
+<h3 id="eventitem">eventItem</h3>
+<h4 id="discussion">Discussion</h4>
+<p>This object contains information about the calendar&#39;s event item.</p>
+<h4 id="keys">Keys</h4>
+<ul>
+<li>_id_required</li>
+</ul>
+<p>A String value. A unique identifier for the event.</p>
+<ul>
+<li>_title_optional</li>
+</ul>
+<p>A String value. The title for the event.</p>
+<ul>
+<li>_location_optional</li>
+</ul>
+<p>A String value. The location associated with the event.</p>
+<ul>
+<li>_notes_optional</li>
+</ul>
+<p>A String value. The notes associated with the event.</p>
+<ul>
+<li>_url_optional</li>
+</ul>
+<p>A String value. The URL for the event.</p>
+<ul>
+<li>_alarm_optional</li>
+</ul>
+<p>An eventAlarmItem object. The alarm associated with the event.</p>
+<ul>
+<li>_calendarId_optional</li>
+</ul>
+<p>A String value. The unique identifier for the calendar for the event.
+Developer can receive calendar info with getCalendarById method.</p>
+<ul>
+<li>_startDate_required</li>
+</ul>
+<p>A Date value. The start date for the event.</p>
+<ul>
+<li>_endDate_required</li>
+</ul>
+<p>A Date value. The end date for the event.</p>
+<ul>
+<li>_availability_optional</li>
+</ul>
+<p>A String value. The event’s availability setting for scheduling purposes. The
+value can be one of:</p>
+<pre><code>* _notSupported_</code></pre>
+<p>Availability settings are not supported by the event’s calendar.</p>
+<pre><code>* _busy_</code></pre>
+<p>The event has a busy availability setting.</p>
+<pre><code>* _free_</code></pre>
+<p>The event has a free availability setting.</p>
+<pre><code>* _tentative_</code></pre>
+<p>The event has a tentative availability setting.</p>
+<pre><code>* _unavailable_</code></pre>
+<p>The event has an unavailable availability setting.</p>
+<ul>
+<li>_status_optional</li>
+</ul>
+<p>A String value. The event’s status. The value can be one of:</p>
+<pre><code>* _none_</code></pre>
+<p>The event has no status.</p>
+<pre><code>* _confirmed_</code></pre>
+<p>The event is confirmed.</p>
+<pre><code>* _tentative_</code></pre>
+<p>The event is tentative.</p>
+<pre><code>* _canceled_</code></pre>
+<p>The event is canceled.</p>
+<ul>
+<li>_recurrenceRules_optional</li>
+</ul>
+<p>Array of recurrenceRuleItem objects. The recurrence rules for the event.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="getcalendars">getCalendars</h3>
+<p><code>calendar.getCalendars( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a list of the calendars.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _calendars_ \- The list of calendarItem objects. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>calendar.getCalendars( function(info) {  
+    alert(&quot;Calendars count: &quot;+info.calendars.length);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getcalendarbyid">getCalendarById</h3>
+<p><code>calendar.getCalendarById( calendarId, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the calendar with specified id.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_calendarId_required</li>
+</ul>
+<p>A String value. The identifier of the calendar.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _calendars_ \- The list of calendarItem objects with one element. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>calendar.getCalendarById( &quot;2e2b9f86-4a27-43d4-8f1e-c1566244bf3b&quot;,
+function(info) {  
+    alert(&quot;Found calendars count: &quot;+info.calendars.length);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getevents">getEvents</h3>
+<p><code>calendar.getEvents( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a list of events for specified range of dates.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_required</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _startDate_required</code></pre>
+<p>A Date value. The start date for the search range.</p>
+<pre><code>* _endDate_required</code></pre>
+<p>A Date value. The end date for the search range.</p>
+<pre><code>* _calendars_optional</code></pre>
+<p>An Array of Strings. The list with calendar&#39;s identifiers.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _events_ \- The list of eventItem objects. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>calendar.getEvents( {&quot;startDate&quot;:aStartDate, &quot;endDate&quot;:anEndDate },
+function(info) {  
+    alert(&quot;Found &quot;+info.events.length+&quot; events.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="geteventbyid">getEventById</h3>
+<p><code>calendar.getEventById( eventId, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the event with specified id.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_eventId_required</li>
+</ul>
+<p>A String value. The identifier of the event.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _events_ \- The list of eventItem objects with one element. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>calendar.getEventById( &quot;18ab2e21-333b-48d1-b010-6ade00639451&quot;, function(info)
+{  
+    alert(&quot;Found &quot;+info.events.length+&quot; events.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="create">create</h3>
+<p><code>calendar.create( event, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Adds new event to calendar.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_event_required</li>
+</ul>
+<p>eventItem object. Contains information about new event item.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object which contains:</p>
+<pre><code>* _events_ \- The list of eventItem objects with one element. (Array of Object)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var event = {  
+    title: &quot;Test event&quot;,  
+    location: &quot;Test location&quot;,  
+    notes: &quot;Some notes&quot;,  
+    url: &quot;http://www.test.com&quot;,  
+    alarm: {  
+        offset: -600000}, // 10 minutes  
+    startDate: aStartDate,  
+    endDate: anEndDate,  
+    recurrenceRules: [{  
+        frequency: &quot;weekly&quot;,  
+        interval: 1,  
+        daysOfTheWeek: [&quot;mo&quot;,&quot;we&quot;,&quot;fr&quot;]}]};  
+calendar.create( event, function(info) {  
+    alert(&quot;Event added with id: &quot;+info.events[0].id);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="delete">delete</h3>
+<p><code>calendar.delete( event, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Deletes exist event item from calendar.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_event_required</li>
+</ul>
+<p>eventItem object. Contains information for the event. Must contain id. Other
+fields ignored.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is always <strong>null</strong></p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>var event = { id: &quot;18ab2e21-333b-48d1-b010-6ade00639451&quot; };  
+calendar.delete( event, function(info) {  
+    alert(&quot;Event removed.&quot;);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<ul>
+<li><a href="../index.html">Index</a></li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-06-20)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

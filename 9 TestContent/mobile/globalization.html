@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>RBC Platform Docs</title>
+
+        <!-- Bootstrap core CSS -->
+<!--
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+-->      
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">    
+        <link href="../css/site.css" rel="stylesheet">          
+
+        <!-- Custom styles for this template -->
+        <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RBC Platform Docs</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="menu" href="../index.html">Home</a></li>
+                        <li><a class="menu" href="../api/index.html">Cloud</a></li>
+                        <li><a class="menu" href="../mobile/index.html">Mobile</a></li>
+                    </ul>
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+    
+      
+               <li><a class='docnav' href="./appStorage.html">AppStorage</a></li>        
+      
+               <li><a class='docnav' href="./archiving.html">Archiving</a></li>        
+      
+               <li><a class='docnav' href="./audio.html">Audio</a></li>        
+      
+               <li><a class='docnav' href="./audioItem.html">AudioItem</a></li>        
+      
+               <li><a class='docnav' href="./authentication.html">Authentication</a></li>        
+      
+               <li><a class='docnav' href="./barcode.html">Bar Code</a></li>        
+      
+               <li><a class='docnav' href="./battery.html">Battery</a></li>        
+      
+               <li><a class='docnav' href="./btPeripheral.html">Bluetooth Peripheral</a></li>        
+      
+               <li><a class='docnav' href="./calendar.html">Calendar</a></li>        
+      
+               <li><a class='docnav' href="./camera.html">Camera</a></li>        
+      
+               <li><a class='docnav' href="./compass.html">Compass</a></li>        
+      
+               <li><a class='docnav' href="./connection.html">Connection</a></li>        
+      
+               <li><a class='docnav' href="./contacts.html">Contacts</a></li>        
+      
+               <li><a class='docnav' href="./cryptography.html">Cryptography</a></li>        
+      
+               <li><a class='docnav' href="./device.html">Device</a></li>        
+      
+               <li><a class='docnav' href="./deviceOrientation.html">Device Orientation</a></li>        
+      
+               <li><a class='docnav' href="./globalization.html">Globalization</a></li>        
+      
+               <li><a class='docnav' href="./kernel_errors.html">Kernel Errors</a></li>        
+      
+               <li><a class='docnav' href="./kernel_events.html">Kernel Events</a></li>        
+      
+               <li><a class='docnav' href="./kernel_promise.html">Kernel Promise</a></li>        
+      
+               <li><a class='docnav' href="./launch.html">Launch</a></li>        
+      
+               <li><a class='docnav' href="./localnotifications.html">Local Notifications</a></li>        
+      
+               <li><a class='docnav' href="./mainMenu.html">Main Menu</a></li>        
+      
+               <li><a class='docnav' href="./messaging.html">Messaging</a></li>        
+      
+               <li><a class='docnav' href="./index.html">Mobile API</a></li>        
+      
+               <li><a class='docnav' href="./navigationBar.html">Navigation Bar</a></li>        
+      
+               <li><a class='docnav' href="./notifications.html">Notifications</a></li>        
+      
+               <li><a class='docnav' href="./printing.html">Printing</a></li>        
+      
+               <li><a class='docnav' href="./pushNotifications.html">Push Notifications</a></li>        
+      
+               <li><a class='docnav' href="./connectionMonitor.html">RBCConnectionMonitor</a></li>        
+      
+               <li><a class='docnav' href="./webview.html">Web View</a></li>        
+      
+               <li><a class='docnav' href="./iBeacon.html">iBeacon</a></li>        
+      
+    
+    </ul>
+            </div>         
+        </div>
+        <div class="col-md-7">
+              <h1 id="globalization-module-reference">Globalization Module Reference</h1>
+<h2 id="overview">Overview</h2>
+<p>Obtains information and performs operations specific to the user&#39;s locale and
+timezone.</p>
+<h2 id="tasks">Tasks</h2>
+<ul>
+<li><code>getPreferredLanguage</code> function</li>
+<li><code>getLocaleName</code> function</li>
+<li><code>dateToString</code> function</li>
+<li><code>stringToDate</code> function</li>
+<li><code>getDatePattern</code> function</li>
+<li><code>getDateNames</code> function</li>
+<li><code>isDayLightSavingsTime</code> function</li>
+<li><code>getFirstDayOfWeek</code> function</li>
+<li><code>numberToString</code> function</li>
+<li><code>stringToNumber</code> function</li>
+<li><code>getNumberPattern</code> function</li>
+<li><code>getCurrencyPattern</code> function</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h3 id="getpreferredlanguage">getPreferredLanguage</h3>
+<p><code>globalization.getPreferredLanguage( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the language identifier string to the <em>succesCallback</em> with a
+properties object as a parameter. That object should have a value property
+with a String value.<br>If there is an error getting the language, then the <em>errorCallback</em> executes.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getPreferredLanguage( function(info) {  
+    alert(&quot;language: &quot; \+ info.value);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getlocalename">getLocaleName</h3>
+<p><code>globalization.getLocaleName( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the locale identifier string to the <em>succesCallback</em> with a properties
+object as a parameter. That object should have a value property with a String
+value.<br>If there is an error getting the locale, then the <em>errorCallback</em> executes.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getLocaleName( function(info) {  
+    alert(&quot;locale: &quot; \+ info.value);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="datetostring">dateToString</h3>
+<p><code>globalization.dateToString( date, options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the formatted date String via a value property accessible from the
+object passed as a parameter to the <em>succesCallback</em>.<br>If there is an error formatting the date, then the <em>errorCallback</em> executes</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_date_required</li>
+</ul>
+<p>Date. This parameter should be of type Date.</p>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _formatLength_</code></pre>
+<p>Variants: short, medium, long, full</p>
+<pre><code>* _selector_</code></pre>
+<p>Variants: date, time, date and time</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.dateToString( new Date(), {formatLength:&quot;short&quot;, selector:&quot;date
+and time&quot;},  
+function(info) {  
+    alert(&quot;date: &quot; \+ info.value);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="stringtodate">stringToDate</h3>
+<p><code>globalization.stringToDate( dateString, options, successCallback,
+errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Parses a date formatted as a string, according to the client&#39;s user
+preferences and calendar using the time zone of the client, and returns the
+corresponding date object.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_dateString_required</li>
+</ul>
+<p>Date. This parameter should be of type String.</p>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _formatLength_</code></pre>
+<p>Variants: short, medium, long, full</p>
+<pre><code>* _selector_</code></pre>
+<p>Variants: date, time, date and time</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _year_\- The four digit year. (Number)
+* _month_\- The month from (0-11). (Number)
+* _day_\- The day from (1-31). (Number)
+* _hour_\- The hour from (0-23). (Number)
+* _minute_\- The minute from (0-59). (Number)
+* _second_\- The second from (0-59). (Number)
+* _millisecond_\- The milliseconds (from 0-999), not available on all platforms. (Number)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.stringToDate( &quot;4/06/2014&quot;, {selector:&quot;date&quot;},  
+function(info) {  
+    alert(&quot;month:&quot; \+ info.month + &quot; day:&quot; \+ date.day + &quot; year:&quot; \+ date.year);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getdatepattern">getDatePattern</h3>
+<p><code>globalization.getDatePattern( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a pattern string to format and parse dates according to the client&#39;s
+user preferences.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _formatLength_</code></pre>
+<p>Variants: short, medium, long, full</p>
+<pre><code>* _selector_</code></pre>
+<p>Variants: date, time, date and time</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _pattern_ \- The date and time pattern to format and parse dates. The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). (String)
+* _timezone_ \- The abbreviated name of the time zone on the client. (String)
+* _utc_offset_ \- The current difference in seconds between the client&#39;s time zone and coordinated universal time. (Number)
+* _dst_offset_ \- The current daylight saving time offset in seconds between the client&#39;s non-daylight saving&#39;s time zone and the client&#39;s daylight saving&#39;s time zone. (Number)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getDatePattern( {formatLength:&quot;short&quot;, selector:&quot;date and
+time&quot;},  
+function(info) {  
+    alert(&quot;pattern: &quot; \+ info.pattern);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getdatenames">getDateNames</h3>
+<p><code>globalization.getDateNames( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns an array of the names of the months or days of the week, depending on
+the client&#39;s user preferences and calendar.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _type_</code></pre>
+<p>Variants: narrow, wide</p>
+<pre><code>* _item_</code></pre>
+<p>Variants: months, days</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _value_ \- property with an Array of String values. The array features names starting from either the first month in the year or the first day of the week, depending on the option selected.</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getDateNames( { type: &quot;wide&quot;, item: &quot;months&quot; },  
+function(info) {  
+    for (var i = 0; i &lt; info.value.length; i++) {  
+        alert(&quot;month: &quot; \+ info.value[i]);  
+    }  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="isdaylightsavingstime">isDayLightSavingsTime</h3>
+<p><code>globalization.isDayLightSavingsTime( date, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Indicates whether daylight savings time is in effect for a given date using
+the client&#39;s time zone and calendar.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_date_required</li>
+</ul>
+<p>Date. This parameter should be of type Date.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _dst_ \- property with a Boolean value. A true value indicates that daylight savings time is in effect for the given date, and false indicates that it is not.</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.isDayLightSavingsTime( new Date(),  
+function(info) {  
+    alert(&quot;dst: &quot; \+ info.dst);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getfirstdayofweek">getFirstDayOfWeek</h3>
+<p><code>globalization.getFirstDayOfWeek( successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns the first day of the week according to the client&#39;s user preferences
+and calendar.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _value_ \- property with a Number value.</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getFirstDayOfWeek( function(info) {  
+    alert(&quot;day: &quot; \+ info.value);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="numbertostring">numberToString</h3>
+<p><code>globalization.numberToString( number, options, successCallback, errorCallback
+)</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a number formatted as a string according to the client&#39;s user
+preferences.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li><p>_number_required</p>
+</li>
+<li><p>_options_optional</p>
+</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _type_</code></pre>
+<p>Variants: decimal, percent, currency</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _value_ \- property with a String value.</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.numberToString( 3.1415926, {type:&quot;decimal&quot;},  
+function(info) {  
+    alert(&quot;number:&quot; \+ info.value);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="stringtonumber">stringToNumber</h3>
+<p><code>globalization.stringToNumber( string, options, successCallback, errorCallback
+)</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Parses a number formatted as a string according to the client&#39;s user
+preferences and returns the corresponding number.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_string_required</li>
+</ul>
+<p>Number. This parameter should be of type String.</p>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _type_</code></pre>
+<p>Variants: decimal, percent, currency</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _value_ \- property with a Number value.</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.stringToNumber( &quot;3.1415926&quot;, {type:&quot;decimal&quot;},  
+function(info) {  
+    alert(&quot;number:&quot; \+ info.value);  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getnumberpattern">getNumberPattern</h3>
+<p><code>globalization.getNumberPattern( options, successCallback, errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a pattern string to format and parse numbers according to the client&#39;s
+user preferences.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_options_optional</li>
+</ul>
+<p>Object with key-value. Supported keys:</p>
+<pre><code>* _type_</code></pre>
+<p>Variants: decimal, percent, currency</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _pattern_ \- The number pattern to format and parse numbers. The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). (String)
+* _symbol_ \- The symbol to use when formatting and parsing, such as a percent or currency symbol. (String)
+* _fraction_ \- The number of fractional digits to use when parsing and formatting numbers. (Number)
+* _rounding_ \- The rounding increment to use when parsing and formatting. (Number)
+* _positive_ \- The symbol to use for positive numbers when parsing and formatting. (String)
+* _negative_ \- The symbol to use for negative numbers when parsing and formatting. (String)
+* _decimal_ \- The decimal symbol to use for parsing and formatting. (String)
+* _grouping_ \- The grouping symbol to use for parsing and formatting. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getNumberPattern( {type:&quot;decimal&quot;},  
+function(info) {  
+    alert(&quot;pattern: &quot; \+ info.pattern + &quot;\n&quot; +  
+        &quot;symbol: &quot; \+ info.symbol + &quot;\n&quot; +  
+        &quot;fraction: &quot; \+ info.fraction + &quot;\n&quot; +  
+        &quot;rounding: &quot; \+ info.rounding + &quot;\n&quot; +  
+        &quot;positive: &quot; \+ info.positive + &quot;\n&quot; +  
+        &quot;negative: &quot; \+ info.negative + &quot;\n&quot; +  
+        &quot;decimal: &quot; \+ info.decimal + &quot;\n&quot; +  
+        &quot;grouping: &quot; \+ info.grouping);},  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<h3 id="getcurrencypattern">getCurrencyPattern</h3>
+<p><code>globalization.getCurrencyPattern( currencyCode, successCallback,
+errorCallback )</code></p>
+<h4 id="discussion">Discussion</h4>
+<p>Returns a pattern string to format and parse currency values according to the
+client&#39;s user preferences and ISO 4217 currency code.</p>
+<h4 id="arguments">Arguments</h4>
+<ul>
+<li>_currencyCode_required</li>
+</ul>
+<p>The parameter should be a String of one of the ISO 4217 currency codes, for
+example &#39;USD&#39;.</p>
+<ul>
+<li>_succesCallback_optional</li>
+</ul>
+<p>Success callback. Called when function finished without errors</p>
+<p>Callback parameter is object and can contains keys:</p>
+<pre><code>* _pattern_ \- The currency pattern to format and parse currency values. The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). (String)
+* _code_ \- The ISO 4217 currency code for the pattern. (String)
+* _fraction_ \- The number of fractional digits to use when parsing and formatting currency. (Number)
+* _rounding_ \- The rounding increment to use when parsing and formatting. (Number)
+* _decimal_ \- The decimal symbol to use for parsing and formatting. (String)
+* _grouping_ \- The grouping symbol to use for parsing and formatting. (String)</code></pre>
+<ul>
+<li>_errorCallback_optional</li>
+</ul>
+<p>Error Callback. Called when function return error.</p>
+<h4 id="return-value">Return Value</h4>
+<ul>
+<li><em><a href="kernel_promise.html">RBCPromise</a> object</em></li>
+</ul>
+<h4 id="sample">Sample</h4>
+<p><code>globalization.getCurrencyPattern( &quot;USD&quot;,  
+function(info) {  
+    alert(&quot;pattern: &quot; \+ info.pattern + &quot;\n&quot; +  
+        &quot;code: &quot; \+ info.code + &quot;\n&quot; +  
+        &quot;fraction: &quot; \+ info.fraction + &quot;\n&quot; +  
+        &quot;rounding: &quot; \+ info.rounding + &quot;\n&quot; +  
+        &quot;decimal: &quot; \+ info.decimal + &quot;\n&quot; +  
+        &quot;grouping: &quot; \+ info.grouping);},  
+}, function (error) {  
+    alert(&quot;code: &quot; \+ error.code + &quot;\nmessage: &quot; \+ error.message);  
+});</code>  </p>
+<ul>
+<li><a href="../index.html">Index</a></li>
+</ul>
+<hr>
+<p>(C) 2014 Red Book Connect. All rights reserved. (Last updated: 2014-06-05)</p>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- compiled and minified Bootstrap JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
