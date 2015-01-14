@@ -1,7 +1,9 @@
 site_name: RBC Platform Documentation
 pages:
-- [GettingStarted/index.md, Getting Started]
-- [Agent/index.md, Agent]
-- [AgentApps/index.md, Agent Apps]
-- [MobileContainer/index.md, Mobile Container]
-- [MobileApps/index.md, Mobile Apps]
+- ['index.md', 'Home']
+- ['GettingStarted/index.md', 'Getting Started']
+- ['Agent/index.md', 'Agent']
+- ['AgentApps/index.md', 'Agent Apps']
+- ['MobileContainer/index.md', 'Mobile Container']
+- ['MobileApps/index.md', 'Mobile Apps']
+theme: readthedocs
