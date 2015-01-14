@@ -15,7 +15,7 @@ info [options]
 rbc-agent info –h
 rbc -agent info --help
 
-#####start – This command will start the agent if the agent has not started or has been stopped
+**start** – This command will start the agent if the agent has not started or has been stopped
 start [options]
 * -h, --help - displays the usage information for the command
 * --config <file> - will attempt to use the fully qualified shared configuration fiile that is provided (e.g. C:\RBC Link\package.json)
@@ -31,7 +31,7 @@ start [options]
 * rbc-agent start –v,
 * rbc-agent start --verbose
 
-#####stop - This command will stop a running agent on the system
+**stop** - This command will stop a running agent on the system
  stop [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - the api port
@@ -45,7 +45,7 @@ start [options]
 * rbc-agent stop -v
 * rbc-agent stop --verbose
 
-#####status   - This command set the status of a running agent on the system
+**status**   - This command set the status of a running agent on the system
 status [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - this will get the status of the agent on the specified management port
@@ -59,7 +59,7 @@ status [options]
 * rbc-agent status -v
 * rbc-agent status --verbose
 
-#####diagnostics – This command will test the agent’s configuration
+**diagnostics** – This command will test the agent’s configuration
 diagnostics [options]
 * -h, --help - displays the usage information for the command
 * -v, --verbose – Will run the command in verbose mode to provide more information
@@ -70,7 +70,7 @@ diagnostics [options]
 * rbc-agent diagnostics -v
 * rbc-agent diagnostics –verbose
 
-#####check-connection - Test the outbound connection to the cloud
+**check-connection** - Test the outbound connection to the cloud
 check-connection [options] <scheme>://<host>:<post>
 * -h, --help - displays the usage information for the command
 * -v, --verbose – Will run the check-connection command in verbose mode to provide more information
@@ -83,7 +83,7 @@ check-connection [options] <scheme>://<host>:<post>
 * rbc-agent check-connection -v
 * rbc-agent check-connection --verbose
 
-#####setup – This command will launch the setup console
+**setup** – This command will launch the setup console
 setup [options]
 * -h, --help - displays the usage information for the command
 * --home <dir> – Will run the setup command using the fully qualified path of the working directory of the agent
@@ -95,7 +95,7 @@ setup [options]
 * rbc-agent setup -v
 * rbc-agent setup --verbose
 
-#####reset – This command will reset the agent’s identity
+**reset** – This command will reset the agent’s identity
 [options]
 * -h, --help - displays the usage information for the command
 * --home <dir> – Will run the reset command using the fully qualified path of the working directory of the agent
@@ -114,7 +114,7 @@ setup [options]
 * rbc-agent reset -v
 * rbc-agent reset --verbose
 
-#####console –This command launches the web management console
+**console** –This command launches the web management console
 [options]
 * -h, --help - displays the usage information for the command
 
@@ -123,7 +123,7 @@ setup [options]
 * rbc-agent console --help
 * rbc-agent console
 
-####Management Console
+###Management Console
 The rbc-agent includes a web management console. This console is available from an internet browser on port 4444 of the local network interface.
 http://localhost:4444    -- or --    http://127.0.0.1:4444
 The management console provides three distinct applications:
