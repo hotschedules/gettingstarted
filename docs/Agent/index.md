@@ -6,12 +6,12 @@ This interface is available from a terminal window or command line prompt by cal
 Command Usage: rbc-agent [options] [command]
 
 Here is the following list of Command Line Interface commands:
-
+#####rbc-agent info -h
 **info–** This command will get the information about the agent (e.g. version number, what type of agent it is, etc…)
 info [options]
 * -h, --help - displays the usage information for the info command
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent info –h
 * rbc -agent info --help
 
