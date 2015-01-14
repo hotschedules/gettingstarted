@@ -142,7 +142,7 @@ Usage: [http://127.0.0.1:4444/<app>](http://127.0.0.1:4444/<app>)
    
        provide the initial configuration
        
-    [http://127.0.0.1:4444/console](http://127.0.0.1:4444/console)
+   [http://127.0.0.1:4444/console](http://127.0.0.1:4444/console)
     
        Get the status of a running agent
        
