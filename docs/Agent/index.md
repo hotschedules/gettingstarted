@@ -126,7 +126,7 @@ setup [options]
 ###Management Console
 The rbc-agent includes a web management console. This console is available from an internet browser on port 4444 of the local network interface.
 
-[http://localhost:4444](http://localhost:4444)    -- or --    http://127.0.0.1:4444
+[http://localhost:4444](http://localhost:4444)    -- or --    [http://127.0.0.1:4444](http://127.0.0.1:4444)
 
 The management console provides three distinct applications:
 
@@ -134,19 +134,19 @@ The management console provides three distinct applications:
 2. The Configuration & Monitoring Console
 3. A Restful API
  
-Usage: http://127.0.0.1:4444/<app>
+Usage: [http://127.0.0.1:4444/<app>](http://127.0.0.1:4444/<app>)
 
    Applications:
    
-   http://127.0.0.1:4444/setup
+   [http://127.0.0.1:4444/setup](http://127.0.0.1:4444/setup)
    
        provide the initial configuration
        
-    http://127.0.0.1:4444/console
+    [http://127.0.0.1:4444/console](http://127.0.0.1:4444/console)
     
        Get the status of a running agent
        
-   http://127.0.0.1:4444/api
+   [http://127.0.0.1:4444/api](http://127.0.0.1:4444/api)
    
        Get the status of a running agent
        
