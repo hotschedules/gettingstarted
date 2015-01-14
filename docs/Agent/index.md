@@ -7,9 +7,11 @@ This interface is available from a terminal window or command line prompt by cal
 Command Usage: rbc-agent [options] [command]
 
 Here is the following list of Command Line Interface commands:
-######info – This command will get the information about the agent (e.g. version number, what type of agent it is, etc…)
+######info – 
+This command will get the information about the agent (e.g. version number, what type of agent it is, etc…)
 info [options]
 * -h, --help - displays the usage information for the info command
+
 ######Command Usage Examples:
 rbc-agent info –h
 rbc -agent info --help
@@ -20,6 +22,7 @@ start [options]
 * --config <file> - will attempt to use the fully qualified shared configuration fiile that is provided (e.g. C:\RBC Link\package.json)
 * --port <port> - the will start the agent setting the management port for the admin interface
 * -v, --verbose – Will run the start command in verbose mode to provide more information
+
 ######Command Usage Examples:
 * rbc-agent start –h
 * rbc-agent start --help
@@ -34,6 +37,7 @@ start [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - the api port
 * -v, --verbose – Will run the command in verbose mode to provide more information
+
 ######Command Usage Examples:
 * rbc-agent stop –h
 * rbc-agent stop --help
@@ -47,6 +51,7 @@ status [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - this will get the status of the agent on the specified management port
 * -v, --verbose – Will run the command in verbose mode to provide more information
+
 ######Command Usage Examples:
 * rbc-agent status –h
 * rbc-agent status --help
@@ -59,6 +64,7 @@ status [options]
 diagnostics [options]
 * -h, --help - displays the usage information for the command
 * -v, --verbose – Will run the command in verbose mode to provide more information
+
 ######Command Usage Examples:
 * rbc-agent diagnostics –h
 * rbc-agent diagnostics --help
@@ -69,6 +75,7 @@ diagnostics [options]
 check-connection [options] <scheme>://<host>:<post>
 * -h, --help - displays the usage information for the command
 * -v, --verbose – Will run the check-connection command in verbose mode to provide more information
+
 ######Command Usage Examples:
 * rbc-agent check-connection –h
 * rbc-agent check-connection --help
@@ -81,6 +88,7 @@ check-connection [options] <scheme>://<host>:<post>
 setup [options]
 * -h, --help - displays the usage information for the command
 * --home <dir> – Will run the setup command using the fully qualified path of the working directory of the agent
+
 ######Command Usage Examples:
 * rbc-agent setup –h
 * rbc-agent setup --help
@@ -95,6 +103,7 @@ setup [options]
 * -f, --force - this will force the agent to reset regardless of the state that it is currently in
 * -h, --hard - this will reset the agent’s name and namespace
 * -v, --verbose – Will run the command in verbose mode to provide more information
+
 ######Command Usage Examples:
 * rbc-agent reset –h
 * rbc-agent reset --help
@@ -109,6 +118,7 @@ setup [options]
 ######console –This command launches the web management console
 [options]
 * -h, --help - displays the usage information for the command
+
 ######Command Usage Examples:
 * rbc-agent console –h
 * rbc-agent console --help
