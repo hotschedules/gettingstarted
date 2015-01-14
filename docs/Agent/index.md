@@ -12,8 +12,8 @@ info [options]
 * -h, --help - displays the usage information for the info command
 
 #####Command Usage Examples:
-rbc-agent info –h
-rbc -agent info --help
+* rbc-agent info –h
+* rbc -agent info --help
 
 **start** – This command will start the agent if the agent has not started or has been stopped
 start [options]
