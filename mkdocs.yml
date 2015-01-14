@@ -6,4 +6,7 @@ pages:
 - ['AgentApps/index.md', 'Agent Apps']
 - ['MobileContainer/index.md', 'Mobile Container']
 - ['MobileApps/index.md', 'Mobile Apps']
+- ['Platform/index.md', 'Platform']
+- ['Security/index.md', 'Security']
+- ['Tools/index.md', 'Tools']
 theme: readthedocs
