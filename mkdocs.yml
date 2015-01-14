@@ -1,4 +1,4 @@
-site_name: RBC Platform Documentation  
+site_name: RBC Platform Documentation
 pages:
 - ['index.md', 'Home']
 - ['GettingStarted/index.md', 'Getting Started']
