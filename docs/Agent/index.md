@@ -1,7 +1,6 @@
-Agent
+##Bodhi-Agent’s Command Line Interface
 =====================
 
-#####Bodhi-Agent’s Command Line Interface
 The rbc-agent includes a command line interface to perform some basic functions.
 This interface is available from a terminal window or command line prompt by calling  >`rbc-agent`.
 Command Usage: rbc-agent [options] [command]
