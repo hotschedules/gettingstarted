@@ -63,7 +63,7 @@ status [options]
 * rbc-agent status --verbose
 
 
-#####DIAGNOSTICS rbc-agent diagnostics –h
+#####DIAGNOSTICS: rbc-agent diagnostics –h
 **diagnostics** – This command will test the agent’s configuration
 diagnostics [options]
 * -h, --help - displays the usage information for the command
