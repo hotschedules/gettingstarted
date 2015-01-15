@@ -6,7 +6,7 @@ This interface is available from a terminal window or command line prompt by cal
 Command Usage: rbc-agent [options] [command]
 
 Here is the following list of Command Line Interface commands:
-#####rbc-agent info -h
+#####INFO: rbc-agent info –h
 **info–** This command will get the information about the agent (e.g. version number, what type of agent it is, etc…)
 info [options]
 * -h, --help - displays the usage information for the info command
@@ -15,7 +15,7 @@ info [options]
 * rbc-agent info –h
 * rbc -agent info --help
 
-#####rbc-agent start –h
+#####START: rbc-agent start –h
 **start** – This command will start the agent if the agent has not started or has been stopped
 start [options]
 * -h, --help - displays the usage information for the command
@@ -32,7 +32,7 @@ start [options]
 * rbc-agent start –v,
 * rbc-agent start --verbose
 
-#####rbc-agent stop –h
+#####STOP: rbc-agent stop –h
 **stop** - This command will stop a running agent on the system
  stop [options]
 * -h, --help - displays the usage information for the command
@@ -47,7 +47,7 @@ start [options]
 * rbc-agent stop -v
 * rbc-agent stop --verbose
 
-#####rbc-agent status –h
+#####STATUS: rbc-agent status –h
 **status**   - This command set the status of a running agent on the system
 status [options]
 * -h, --help - displays the usage information for the command
@@ -63,7 +63,7 @@ status [options]
 * rbc-agent status --verbose
 
 
-#####rbc-agent diagnostics –h
+#####DIAGNOSTICS rbc-agent diagnostics –h
 **diagnostics** – This command will test the agent’s configuration
 diagnostics [options]
 * -h, --help - displays the usage information for the command
@@ -75,7 +75,7 @@ diagnostics [options]
 * rbc-agent diagnostics -v
 * rbc-agent diagnostics –verbose
 
-#####rbc-agent check-connection –h
+#####CHECK-CONNECTION: rbc-agent check-connection –h
 **check-connection** - Test the outbound connection to the cloud
 check-connection [options] <scheme>://<host>:<post>
 * -h, --help - displays the usage information for the command
@@ -89,7 +89,7 @@ check-connection [options] <scheme>://<host>:<post>
 * rbc-agent check-connection -v
 * rbc-agent check-connection --verbose
 
-#####rbc-agent setup –h
+#####SETUP: rbc-agent setup –h
 **setup** – This command will launch the setup console
 setup [options]
 * -h, --help - displays the usage information for the command
@@ -102,7 +102,7 @@ setup [options]
 * rbc-agent setup -v
 * rbc-agent setup --verbose
 
-#####rbc-agent reset –h
+#####RESET: rbc-agent reset –h
 **reset** – This command will reset the agent’s identity
 [options]
 * -h, --help - displays the usage information for the command
@@ -122,7 +122,7 @@ setup [options]
 * rbc-agent reset -v
 * rbc-agent reset --verbose
 
-#####rbc-agent console –h
+#####CONSOLE: rbc-agent console –h
 **console** –This command launches the web management console
 [options]
 * -h, --help - displays the usage information for the command
