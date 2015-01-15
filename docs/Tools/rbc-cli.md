@@ -20,6 +20,29 @@ One the tools are installed, verify the installation using the version command. 
   M.m.b
 ````
 
+## Getting Started
+
+2. Create a directory for your workspace and `cd` into it.
+3. `rbc-cli init` <br> This will create a rbc-project.json which will house all your environment info. It will
+also create an /apps directory where your apps will reside.
+4. `rbc-cli new [ENVIRONMENT NAME]` This will create a new environment entry in rbc-project.json.
+5. Open up rbc-project.json and fill in information about your new environment. <br>
+Example: <br>
+```
+{
+     "environments": {
+           "[ENVIRONMENT NAME]": {
+               "uri": "[API ENDPOINT]",
+               "user": "[USERNAME]",
+               "password": "[PASSWORD]",
+               "namespace": "[NAMESPACE]"
+          }
+     },
+     "default": "[ENVIRONMENT NAME]"
+}
+```
+Once you do this, all commands will be used under the default environment unless you specify otherwise with the -e flag.
+
 ##General Str
 
 ###Common Usage
@@ -800,33 +823,6 @@ The typename posted
 app-tools is a command line tool, bundled with rbc-cli, that allows app developers to quickly generate
 an app and publish it to the cloud so that it can be viewed on the mobile container.
 
-### Getting Started
-
-1. `npm install -g rbc-cli`
-2. Create a directory for your workspace and `cd` into it.
-3. `rbc-cli init` <br> This will create a rbc-project.json which will house all your environment info. It will
-also create an /apps directory where your apps will reside.
-4. `rbc-cli new [ENVIRONMENT NAME]` This will create a new environment entry in rbc-project.json.
-5. Open up rbc-project.json and fill in information about your new environment. <br>
-Example: <br>
-```
-{
-     "environments": {
-           "[ENVIRONMENT NAME]": {
-               "uri": "[API ENDPOINT]",
-               "user": "[USERNAME]",
-               "password": "[PASSWORD]",
-               "namespace": "[NAMESPACE]"
-          }
-     },
-     "default": "[ENVIRONMENT NAME]"
-}
-```
-Once you do this, all commands will be used under the default environment unless you specify otherwise with the -e flag.
-
-
-Please refer to the above instructions for more details on how to install rbc-cli and set up
-your project and environment.
 
 
 ## `app-tools` Commands
