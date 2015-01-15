@@ -6,8 +6,8 @@ This interface is available from a terminal window or command line prompt by cal
 Command Usage: rbc-agent [options] [command]
 
 Here is the following list of Command Line Interface commands:
-#####Agent Info
-   rbc-agent info –h
+#####Info
+	rbc-agent info –h
    
 **info–** This command will get the information about the agent (e.g. version number, what type of agent it is, etc…)
 info [options]
@@ -16,11 +16,15 @@ info [options]
 
 **Command Usage Examples:**
 
-* rbc-agent info –h
-* rbc -agent info --help
+	rbc-agent info –h
+	rbc-agent info --help
 
-#####Agent Start: rbc-agent start –h
+#####Start
+
+	rbc-agent start -h
+	
 **start** – This command will start the agent if the agent has not started or has been stopped
+
 start [options]
 
 * -h, --help - displays the usage information for the command
@@ -30,31 +34,38 @@ start [options]
 
 **Command Usage Examples:** 
 
-* rbc-agent start –h
-* rbc-agent start --help
-* rbc-agent start
-* rbc-agent start –-config C:\RBC Link\package.json
-* rbc-agent start –-port 4444
-* rbc-agent start –v,
-* rbc-agent start --verbose
+	rbc-agent start –h
+	rbc-agent start --help
+	rbc-agent start
+	rbc-agent start –-config C:\RBC Link\package.json
+	rbc-agent start –-port 4444
+	rbc-agent start –v,
+	rbc-agent start --verbose
 
-#####Agent Stop: rbc-agent stop –h
+#####Stop
+
+	rbc-agent stop –h
 
 **stop** - This command will stop a running agent on the system
- stop [options]
+
+stop [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - the api port
 * -v, --verbose – Will run the command in verbose mode to provide more information
 
 **Command Usage Examples:**
-* rbc-agent stop –h
-* rbc-agent stop --help
-* rbc-agent stop –p 4444
-* rbc-agent stop –-port 4444
-* rbc-agent stop -v
-* rbc-agent stop --verbose
 
-#####Agent Status: rbc-agent status –h
+	rbc-agent stop –h
+	rbc-agent stop --help
+	rbc-agent stop –p 4444
+	rbc-agent stop –-port 4444
+	rbc-agent stop -v
+	rbc-agent stop --verbose
+
+#####Status
+	
+	rbc-agent status –h
+
 **status**   - This command set the status of a running agent on the system
 status [options]
 
@@ -64,15 +75,18 @@ status [options]
 
 **Command Usage Examples:**
 
-* rbc-agent status –h
-* rbc-agent status --help
-* rbc-agent status –p 4444
-* rbc-agent status –-port 4444
-* rbc-agent status -v
-* rbc-agent status --verbose
+	rbc-agent status –h
+	rbc-agent status --help
+	rbc-agent status –p 4444
+	rbc-agent status –-port 4444
+	rbc-agent status -v
+	rbc-agent status --verbose
 
 
-#####Agent Diagnostics: rbc-agent diagnostics –h
+#####Diagnostics
+	
+	rbc-agent diagnostics –h
+
 **diagnostics** – This command will test the agent’s configuration
 diagnostics [options]
 
@@ -81,12 +95,15 @@ diagnostics [options]
 
 **Command Usage Examples:**
 
-* rbc-agent diagnostics –h
-* rbc-agent diagnostics --help
-* rbc-agent diagnostics -v
-* rbc-agent diagnostics –verbose
+	rbc-agent diagnostics –h
+	rbc-agent diagnostics --help
+	rbc-agent diagnostics -v
+	rbc-agent diagnostics –verbose
 
-#####Agent Check-Connection: rbc-agent check-connection –h
+#####Check-Connection
+	
+	rbc-agent check-connection –h
+
 **check-connection** - Test the outbound connection to the cloud
 check-connection [options] <scheme>://<host>:<post>
 
@@ -95,14 +112,17 @@ check-connection [options] <scheme>://<host>:<post>
 
 **Command Usage Examples:**
 
-* rbc-agent check-connection –h
-* rbc-agent check-connection --help
-* rbc-agent check-connection http://www.google.com
-* rbc-agent check-connection http://www.google.com:5555
-* rbc-agent check-connection -v
-* rbc-agent check-connection --verbose
+	rbc-agent check-connection –h
+	rbc-agent check-connection --help
+	rbc-agent check-connection http://www.google.com
+	rbc-agent check-connection http://www.google.com:5555
+	rbc-agent check-connection -v
+	rbc-agent check-connection --verbose
 
-#####Agent Setup: rbc-agent setup –h
+#####Setup
+	
+	rbc-agent setup –h
+
 **setup** – This command will launch the setup console
 setup [options]
 
@@ -111,13 +131,16 @@ setup [options]
 
 **Command Usage Examples:**
 
-* rbc-agent setup –h
-* rbc-agent setup --help
-* rbc-agent setup –-home C:\RBC Link
-* rbc-agent setup -v
-* rbc-agent setup --verbose
+	rbc-agent setup –h
+	rbc-agent setup --help
+	rbc-agent setup –-home C:\RBC Link
+	rbc-agent setup -v
+	rbc-agent setup --verbose
 
-#####Agent Reset: rbc-agent reset –h
+#####Reset
+	
+	rbc-agent reset –h
+
 **reset** – This command will reset the agent’s identity
 [options]
 
@@ -129,17 +152,20 @@ setup [options]
 
 **Command Usage Examples:**
 
-* rbc-agent reset –h
-* rbc-agent reset --help
-* rbc-agent reset –-home C:\RBC Link
-* rbc-agent reset –f
-* rbc-agent reset –-force
-* rbc-agent reset –-h
-* rbc-agent reset --hard
-* rbc-agent reset -v
-* rbc-agent reset --verbose
+	rbc-agent reset –h
+	rbc-agent reset --help
+	rbc-agent reset –-home C:\RBC Link
+	rbc-agent reset –f
+	rbc-agent reset –-force
+	rbc-agent reset –-h
+	rbc-agent reset --hard
+	rbc-agent reset -v
+	rbc-agent reset --verbose
 
-#####Agent Console: rbc-agent console –h
+#####Console
+	
+	rbc-agent console –h
+
 **console** –This command launches the web management console
 [options]
 
@@ -147,9 +173,9 @@ setup [options]
 
 **Command Usage Examples:**
 
-* rbc-agent console –h
-* rbc-agent console --help
-* rbc-agent console
+	rbc-agent console –h
+	rbc-agent console --help
+	rbc-agent console
 
 ###Management Console
 The rbc-agent includes a web management console. This console is available from an internet browser on port 4444 of the local network interface.
