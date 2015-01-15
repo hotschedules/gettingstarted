@@ -14,7 +14,8 @@ info [options]
 **Command Usage Examples:**
 * rbc-agent info –h
 * rbc -agent info --help
-
+* 
+#####rbc-agent start –h**
 **start** – This command will start the agent if the agent has not started or has been stopped
 start [options]
 * -h, --help - displays the usage information for the command
@@ -22,7 +23,7 @@ start [options]
 * --port <port> - the will start the agent setting the management port for the admin interface
 * -v, --verbose – Will run the start command in verbose mode to provide more information
 
-#####Command Usage Examples:
+** Command Usage Examples:** 
 * rbc-agent start –h
 * rbc-agent start --help
 * rbc-agent start
@@ -31,13 +32,14 @@ start [options]
 * rbc-agent start –v,
 * rbc-agent start --verbose
 
+#####rbc-agent stop –h
 **stop** - This command will stop a running agent on the system
  stop [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - the api port
 * -v, --verbose – Will run the command in verbose mode to provide more information
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent stop –h
 * rbc-agent stop --help
 * rbc-agent stop –p 4444
@@ -45,13 +47,14 @@ start [options]
 * rbc-agent stop -v
 * rbc-agent stop --verbose
 
+#####rbc-agent status –h
 **status**   - This command set the status of a running agent on the system
 status [options]
 * -h, --help - displays the usage information for the command
 * -p, --port <port> - this will get the status of the agent on the specified management port
 * -v, --verbose – Will run the command in verbose mode to provide more information
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent status –h
 * rbc-agent status --help
 * rbc-agent status –p 4444
@@ -59,23 +62,26 @@ status [options]
 * rbc-agent status -v
 * rbc-agent status --verbose
 
+
+#####rbc-agent diagnostics –h
 **diagnostics** – This command will test the agent’s configuration
 diagnostics [options]
 * -h, --help - displays the usage information for the command
 * -v, --verbose – Will run the command in verbose mode to provide more information
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent diagnostics –h
 * rbc-agent diagnostics --help
 * rbc-agent diagnostics -v
 * rbc-agent diagnostics –verbose
 
+#####rbc-agent check-connection –h
 **check-connection** - Test the outbound connection to the cloud
 check-connection [options] <scheme>://<host>:<post>
 * -h, --help - displays the usage information for the command
 * -v, --verbose – Will run the check-connection command in verbose mode to provide more information
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent check-connection –h
 * rbc-agent check-connection --help
 * rbc-agent check-connection http://www.google.com
@@ -83,18 +89,20 @@ check-connection [options] <scheme>://<host>:<post>
 * rbc-agent check-connection -v
 * rbc-agent check-connection --verbose
 
+#####rbc-agent setup –h
 **setup** – This command will launch the setup console
 setup [options]
 * -h, --help - displays the usage information for the command
 * --home <dir> – Will run the setup command using the fully qualified path of the working directory of the agent
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent setup –h
 * rbc-agent setup --help
 * rbc-agent setup –-home C:\RBC Link
 * rbc-agent setup -v
 * rbc-agent setup --verbose
 
+#####rbc-agent reset –h
 **reset** – This command will reset the agent’s identity
 [options]
 * -h, --help - displays the usage information for the command
@@ -103,7 +111,7 @@ setup [options]
 * -h, --hard - this will reset the agent’s name and namespace
 * -v, --verbose – Will run the command in verbose mode to provide more information
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent reset –h
 * rbc-agent reset --help
 * rbc-agent reset –-home C:\RBC Link
@@ -114,11 +122,12 @@ setup [options]
 * rbc-agent reset -v
 * rbc-agent reset --verbose
 
+#####rbc-agent console –h
 **console** –This command launches the web management console
 [options]
 * -h, --help - displays the usage information for the command
 
-#####Command Usage Examples:
+**Command Usage Examples:**
 * rbc-agent console –h
 * rbc-agent console --help
 * rbc-agent console
