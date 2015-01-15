@@ -23,7 +23,7 @@ start [options]
 * --port <port> - the will start the agent setting the management port for the admin interface
 * -v, --verbose – Will run the start command in verbose mode to provide more information
 
-** Command Usage Examples:** 
+**Command Usage Examples:** 
 * rbc-agent start –h
 * rbc-agent start --help
 * rbc-agent start
