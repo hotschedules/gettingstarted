@@ -9,7 +9,5 @@ pages:
 - ['Platform/index.md', 'Platform']
 - ['Security/index.md', 'Security']
 - ['Tools/index.md', 'Tools']
-- ['Tools/rbc-cli/rbc-cli.md', 'Tools']
-- ['Tools/rbc-cli/rbc-types.md', 'Tools']
-- ['Tools/rbc-cli/app-tools.md', 'Tools']
+- ['Tools/rbc-cli.md', 'Tools']
 theme: readthedocs
