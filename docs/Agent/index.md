@@ -8,6 +8,7 @@ Command Usage: rbc-agent [options] [command]
 Here is the following list of Command Line Interface commands:
 #####Agent Info
    rbc-agent info –h
+   
 **info–** This command will get the information about the agent (e.g. version number, what type of agent it is, etc…)
 info [options]
 
