@@ -6,12 +6,12 @@ an app and publish it to the cloud so that it can be viewed on the mobile contai
 
 1. `npm install -g rbc-cli`
 2. Create a directory for your workspace and `cd` into it.
-3. `rbc-cli init` <br> This will create a rbc-project.json which will house all your environment info. It will
+3. `rbc-cli init` This will create a rbc-project.json which will house all your environment info. It will
 also create an /apps directory where your apps will reside.
 4. `rbc-cli new [ENVIRONMENT NAME]` This will create a new environment entry in rbc-project.json.
 5. Open up rbc-project.json and fill in information about your new environment. <br>
-Example: <br>
 ```
+// Example
 {
      "environments": {
            "[ENVIRONMENT NAME]": {
@@ -32,20 +32,56 @@ your project and environment.
 
 
 ## `app-tools` Commands
-##### `app-tools new-app <app name> [-t (custom (default) || angular) --title --description]`
+##### app-tools new-app <app name> [-t (custom (default) || angular) --title --description]
 This command creates a skeleton app project in the /apps directory of your project. The two skeleton projects to choose
 from are: custom (a vanilla html, css, javascript app) and angular (an angular app with a built-in testing framework using
 jasmine and testem and javascript task runner using grunt).
-##### `app-tools publish-app [-e -n -u -p]`*
+
+**Example Command Usages**
+* app-tools new-app myApp
+* app-tools new-app myApp -t angular
+* app-tools new-app myApp --title My App --descripton This app does something.
+
+##### app-tools publish-app [-e -n -u -p]*
 This command publishes the skeleton app to the cloud.
-##### `app-tools list-apps [-e -n -u -p]`*
+
+**Example Command Usages**
+* app-tools publish-app
+* app-tools publish-app -e devEnv
+* app-tools publish-app -n myNamespace -u myUsername -p myPassword
+
+##### app-tools list-apps [-e -n -u -p]*
 This command list all the apps that you can see in your specified environment.
-##### `app-tools add-profile <full profile name> [-e -n -u -p]`*
+
+**Example Command Usages**
+* app-tools list-apps
+* app-tools list-apps -e devEnv
+* app-tools list-apps -n myNamespace -u myUsername -p myPassword
+
+##### app-tools add-profile <full profile name> [-e -n -u -p]*
 This command adds a profile to your app. Users with this profile can then use your app.
-##### `app-tools remove-profile <full profile name> [-e -n -u -p]`*
+
+**Example Command Usages**
+* app-tools add-profile myNamespace.profileName
+* app-tools add-profile myNamespace.profileName -e devEnv
+* app-tools add-profile myNamespace.profileName -n myNamespace -u myUsername -p myPassword
+
+##### app-tools remove-profile <full profile name> [-e -n -u -p]*
 This command removes a profile from your app.
-##### `app-tools list-profiles [-e -n -u -p]`*
+
+**Example Command Usages**
+* app-tools remove-profile myNamespace.profileName
+* app-tools remove-profile myNamespace.profileName -e devEnv
+* app-tools remove-profile myNamespace.profileName -n myNamespace -u myUsername -p myPassword
+
+##### app-tools list-profiles [-e -n -u -p]*
+
 This command lists all the profiles that are associated with your app.
+
+**Example Command Usages**
+* app-tools list-profiles
+* app-tools list-profile -e devEnv
+* app-tools list-profile -n myNamespace -u myUsername -p myPassword
 
 *command must be run in the directory of the app you are want to publish/update.
 
