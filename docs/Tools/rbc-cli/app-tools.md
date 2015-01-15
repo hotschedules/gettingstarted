@@ -40,10 +40,10 @@ jasmine and testem and javascript task runner using grunt).
 **Example Command Usages**
 * app-tools new-app myApp
 * app-tools new-app myApp -t angular
-* app-tools new-app myApp --title My App --descripton This app does something.
+* app-tools new-app myApp --title My App --description This is my app's description.
 
 ##### app-tools publish-app [-e -n -u -p]*
-This command publishes the skeleton app to the cloud.
+This command publishes the app to the cloud. It zips up all the files in /www folder in your app directory and sends it to the cloud.
 
 **Example Command Usages**
 * app-tools publish-app
@@ -51,7 +51,7 @@ This command publishes the skeleton app to the cloud.
 * app-tools publish-app -n myNamespace -u myUsername -p myPassword
 
 ##### app-tools list-apps [-e -n -u -p]*
-This command list all the apps that you can see in your specified environment.
+This command list all the apps that you can see based on your specified environment.
 
 **Example Command Usages**
 * app-tools list-apps
