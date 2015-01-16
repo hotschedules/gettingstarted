@@ -1,4 +1,3 @@
-
 # App Storage Module Reference
 
 ## Overview
