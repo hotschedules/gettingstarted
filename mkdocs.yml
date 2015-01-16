@@ -8,7 +8,7 @@ pages:
 - ['Security.md', 'Security']
 - ['rbc-cli.md', 'Tools']
 - ['API.md', 'Platform API']
-- ['MobileContainer.md', 'Mobile Container API']
-- ['MobileContainer/appStorage.md', 'App Storage']
+- ['./MobileContainer/MobileContainer.md', 'Mobile API']
+- ['./MobileContainer/appStorage.md', 'App Storage']
 - ['API.md', 'Platform API']
 theme: readthedocs
