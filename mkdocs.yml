@@ -7,6 +7,6 @@ pages:
 - ['MobileContainer/index.md', 'Mobile Container']
 - ['MobileApps/index.md', 'Mobile Apps']
 - ['Platform/index.md', 'Platform']
-- ['Security/Security.md', 'Security']
+- ['Security.md', 'Security']
 - ['Tools/rbc-cli.md', 'Tools']
 theme: readthedocs
