@@ -2,11 +2,11 @@ site_name: RBC Platform Documentation
 pages:
 - ['index.md', 'Home']
 - ['GettingStarted.md', 'Getting Started']
-- ['Agent/index.md', 'Agent']
+- ['Agent.md', 'Agent']
 - ['AgentApps.md', 'Writing Agent Apps']
-- ['MobileContainer/index.md', 'Mobile Container']
-- ['MobileApps/index.md', 'Mobile Apps']
-- ['Platform/index.md', 'Platform']
+- ['MobileApps.md', 'Writing Mobile Apps']
+- ['MobileContainer.md', 'Mobile Container API']
+- ['API.md', 'Platform API']
 - ['Security.md', 'Security']
-- ['Tools/rbc-cli.md', 'Tools']
+- ['rbc-cli.md', 'Tools']
 theme: readthedocs
