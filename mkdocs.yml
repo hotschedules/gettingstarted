@@ -10,5 +10,6 @@ pages:
 - ['API.md', 'Platform API']
 - ['./MobileContainer/MobileContainer.md', 'Mobile API']
 - ['./MobileContainer/appStorage.md', 'Mobile API']
+- ['mobile_appStorage.md', 'Mobile API']
 - ['API.md', 'Platform API']
 theme: readthedocs
