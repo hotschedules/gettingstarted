@@ -3,7 +3,7 @@ pages:
 - ['index.md', 'Home']
 - ['GettingStarted.md', 'Getting Started']
 - ['Agent/index.md', 'Agent']
-- ['AgentApps/index.md', 'Agent Apps']
+- ['AgentApps.md', 'Writing Agent Apps']
 - ['MobileContainer/index.md', 'Mobile Container']
 - ['MobileApps/index.md', 'Mobile Apps']
 - ['Platform/index.md', 'Platform']
