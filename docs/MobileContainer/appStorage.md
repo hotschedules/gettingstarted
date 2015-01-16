@@ -1,9 +1,3 @@
----
-title: "AppStorage"
-posted: 2014-01-30
-post: true
-toplevel: false
----
 
 # App Storage Module Reference
 
