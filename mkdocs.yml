@@ -1,7 +1,7 @@
 site_name: RBC Platform Documentation
 pages:
 - ['index.md', 'Home']
-- ['Getting Started.md', 'Getting Started']
+- ['GettingStarted.md', 'Getting Started']
 - ['GettingStarted/index.md', 'Getting Started']
 - ['Agent/index.md', 'Agent']
 - ['AgentApps/index.md', 'Agent Apps']
