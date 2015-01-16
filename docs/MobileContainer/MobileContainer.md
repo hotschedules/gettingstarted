@@ -7,7 +7,7 @@ There is only one API required to deliver applications on Android, iOs or Window
 
 ##Features
 
-[App Storage](./MobileContainer/appStorage.md)  
+[App Storage](appStorage.md)  
 Archiving  
 Audio  
 RBCAudioItem Class  
