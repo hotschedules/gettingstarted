@@ -5,8 +5,10 @@ pages:
 - ['Agent.md', 'Agent']
 - ['AgentApps.md', 'Writing Agent Apps']
 - ['MobileApps.md', 'Writing Mobile Apps']
-- ['MobileContainer.md', 'Mobile Container API']
-- ['API.md', 'Platform API']
 - ['Security.md', 'Security']
 - ['rbc-cli.md', 'Tools']
+- ['API.md', 'Platform API']
+- ['MobileContainer.md', 'Mobile Container API']
+- ['MobileContainer/appStorage.md', 'App Storage']
+- ['API.md', 'Platform API']
 theme: readthedocs
