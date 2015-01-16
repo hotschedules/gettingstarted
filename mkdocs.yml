@@ -8,6 +8,5 @@ pages:
 - ['MobileApps/index.md', 'Mobile Apps']
 - ['Platform/index.md', 'Platform']
 - ['Security/index.md', 'Security']
-- ['Tools/index.md', 'Tools']
 - ['Tools/rbc-cli.md', 'Tools']
 theme: readthedocs
