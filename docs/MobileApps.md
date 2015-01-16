@@ -23,4 +23,4 @@ optional flag (-t custom | angular) allows the user to pick between a custom pro
 * If you want to include an app icon for the menu screen,
  icon.* must be located at the root of the app folder.
 
- Please see [rbc-cli.md](../Tools/rbc-cli.md) for information on app-tools commands.
+ Please see [rbc-cli.md](./rbc-cli.md) for information on app-tools commands.
