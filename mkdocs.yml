@@ -9,6 +9,6 @@ pages:
 - ['rbc-cli.md', 'Tools']
 - ['API.md', 'Platform API']
 - ['./Mobile API/MobileContainer.md', 'Mobile API']
-- ['./Mobile API/appStorage.md', 'AppStorage']
+- ['./Mobile API/appStorage.md', 'Mobile API/AppStorage']
 - ['API.md', 'Platform API']
 theme: readthedocs
