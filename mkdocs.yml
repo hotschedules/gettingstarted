@@ -3,7 +3,7 @@ pages:
 - ['index.md', 'Home']
 - ['GettingStarted.md', 'Getting Started']
 - ['Agent.md', 'Agent']
-- ['AgentApps.md', 'Writing Agent Apps']
+- ['Extensions.md', 'Writing Agent Apps']
 - ['MobileApps.md', 'Writing Mobile Apps']
 - ['Security.md', 'Security']
 - ['rbc-cli.md', 'Tools']
