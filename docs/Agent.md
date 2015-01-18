@@ -16,7 +16,7 @@ $> npm install -g agent-cli
 The general structure of the a command is as follows:
 
 ````
-$> agent-cli [options] <action> [arguments]
+$> npm install agent-cli [options] <action> [arguments]
 ````
 
 ###Options
@@ -25,7 +25,7 @@ Options are prefixed with `-` or `--` to separate them from arguments. Each acti
 
 ####Common Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --help | none | none   | print help about the command
 --verbose | -v | none   | print more detailed output
@@ -98,7 +98,7 @@ $> agent-cli start [options]
 
 ####Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --verbose | -v   | none   | print more detailed output
 --quiet   | -q   | none   | print essential output
@@ -114,9 +114,9 @@ Provides status about a running agent.
 $> agent-cli status [options] 
 ````
 
-####Options
+#####Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --verbose | -v   | none   | print more detailed output
 --quiet   | -q   | none   | print essential output
@@ -130,9 +130,9 @@ Gracefully shutdown the agent.
 $> agent-cli stop [options] 
 ````
 
-####Options
+#####Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --verbose | -v   | none   | print more detailed output
 --quiet   | -q   | none   | print essential output
@@ -150,9 +150,9 @@ Used to check the version of agent-core being used and where that file is locate
 $> agent-cli check-core [options]
 ````
 
-####Options
+#####Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --config    | -f   | path   | specifies the agent's configuration file
 
@@ -166,7 +166,7 @@ $> agent-cli check-cofig [options]
 
 ####Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --config    | -f   | path   | specifies the agent's configuration file
 
@@ -179,7 +179,7 @@ $> agent-cli check-connection [options]
 ````
 ####Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --config    | -f   | path   | specifies the agent's configuration file
 
@@ -225,7 +225,7 @@ A reset command is used to reset the agent's state.
 $> agent-cli reset
 ````
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --home    | -h   | path   | specifies the agent's working directory
 --HARD    | -H   | path   | destroy all state
