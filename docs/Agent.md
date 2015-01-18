@@ -16,7 +16,7 @@ $> npm install -g agent-cli
 The general structure of the a command is as follows:
 
 ````
-$> npm install agent-cli [options] <action> [arguments]
+$> agent-cli [options] <action> [arguments]
 ````
 
 ###Options
