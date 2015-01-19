@@ -13,7 +13,7 @@ $> npm install -g agent-cli
 
 ##General Usage
 
-The general structure of the a command is as follows:
+The general structure of any agent command is as follows:
 
 ````
 $> npm install agent-cli [options] <action> [arguments]
