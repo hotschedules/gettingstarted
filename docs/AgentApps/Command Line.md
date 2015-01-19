@@ -25,7 +25,7 @@ Options are prefixed with `-` or `--` to separate them from arguments. Each acti
 
 ####Common Options
 
-long | short | arg    | deacription
+long | short | arg    | description
 ------| --------- | ------ | -------------
 --help | none | none   | print help about the command
 --verbose | -v | none   | print more detailed output
