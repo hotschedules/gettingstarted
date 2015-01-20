@@ -73,6 +73,7 @@ module.exports = {
 ````
 
 ####Prototypical Extension Module
+
 ````
 module.extension = function(){
         'use strict';
