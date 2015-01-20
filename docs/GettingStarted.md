@@ -25,10 +25,11 @@ Your namespace utilizes user profiles that are configured by your namespace admi
 
 ##### Creating your namespace 
 You need to provide two important details for Red Book Connect [Representer ](mailto:ayal.keren@redbookconnect.com):
+
 * Name
-* Email Address (not implemented yet)
+* Email Address
 
 ####Accessing the API documentation
 
-Api docs are available on https://api.redbookcloud.com/swagger-ui/index.html
+The API Documentation can be found at here: [https://api.redbookcloud.com/swagger-ui/index.html](https://api.redbookcloud.com/swagger-ui/index.html)
 To access them you need to login with your user and password provided by HS.
