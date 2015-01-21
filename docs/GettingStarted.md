@@ -3,7 +3,7 @@ This documentation is intended for the developer wanting to integrate into the B
 
 * Building applications to the the Cloud APIs we support
 * Building mobile/html applications either as standalone html applications or to be part of our Mobile Solution provided
-* Building a POS/Data integration application into your point of sale system to be stored and accessed from our cloud solution
+* Building a data integration application into your point of sale system to be stored and accessed from our cloud solution
 
 #Pre-requisites 
 
