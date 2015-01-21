@@ -1,14 +1,14 @@
-rbc-cli-tools
+bodhi CLI tools
 =============
 
-Command Line Tools for the RBC Cloud
+Command Line Tools for the Bodhi Cloud
 
 ##Installation
 
 The cli tools require a nodejs runtime and are installed using the node package manager (npm).
 
 ````
-> npm install -g rbc-cli
+> npm install -g bodhi-cli
 ````
 
 Not that on *nix based systems and Macs, a global install command MUST be run using sudo.
@@ -16,16 +16,16 @@ Not that on *nix based systems and Macs, a global install command MUST be run us
 One the tools are installed, verify the installation using the version command. The command SHOULD respond with a semantic version of the tools: M is the major version, m is the minor version, and b is the build increment.
 
 ````
-> rbc-cli -V
+> bodhi -V
   M.m.b
 ````
 
 ## Getting Started
 
 2. Create a directory for your workspace and `cd` into it.
-3. `rbc-cli init` <br> This will create a rbc-project.json which will house all your environment info. It will
+3. `bodhi init` <br> This will create a rbc-project.json which will house all your environment info. It will
 also create an /apps directory where your apps will reside.
-4. `rbc-cli new [ENVIRONMENT NAME]` This will create a new environment entry in rbc-project.json.
+4. `bodhi new [ENVIRONMENT NAME]` This will create a new environment entry in rbc-project.json.
 5. Open up rbc-project.json and fill in information about your new environment. <br>
 Example: <br>
 ```
@@ -55,13 +55,13 @@ The first entry is the name of the tool. The second argument is the command. All
 Options can be specified anywhere on the command line __AFTER__ the tool designation. The following commands are considered equivalent.
 
 ````
-rbc-cli -e my-environment -v command
+bodhi -e my-environment -v command
 ````
 ````
-rbc-cli -v command -e my-environment
+bodhi -v command -e my-environment
 ````
 ````
-rbc-cli command -v -e my-environment
+bodhi command -v -e my-environment
 ````
 
 ###Processing Options
@@ -99,7 +99,7 @@ Platform specific directory path of the current project.
 #####Sample
 
 ````
-> rbc-cli pwd
+> bodhi pwd
 /path/to/project/root
 ````
 
@@ -108,7 +108,7 @@ Platform specific directory path of the current project.
 This command will establish the current directory as a new project by creating a new rbc-project.json file. This command will fail safely if an existing rbc-project.json file exists up the directory tree. A user may create a project in a subfolder by using the --force command line option.
 
 ````
-> rbc-cli init [-f]
+> bodhi init [-f]
 /path/to/new/project/root
 ````
 
@@ -125,7 +125,7 @@ Platform specific directory path to the newly initialized project.
 ### General Command Signature
 
 ````
-> rbc-cli <action> <environment> [env-options] [processing-options]
+> bodhi <action> <environment> [env-options] [processing-options]
 ````
 
 ###Commands
@@ -171,7 +171,7 @@ The name of the newly created environment
 #####Signature
 
 ````
-> rbc-cli new <env-name> [env-options] [processing-options]
+> bodhi new <env-name> [env-options] [processing-options]
 <env-name>
 ````
 
@@ -193,7 +193,7 @@ The new name of the existing environment
 #####Signature
 
 ````
-> rbc-cli rename <from> <to> [env-options] [processing-options]
+> bodhi rename <from> <to> [env-options] [processing-options]
 <env-name>
 ````
 
@@ -215,7 +215,7 @@ The new name of the newly created environment
 #####Signature
 
 ````
-> rbc-cli copy <from> <to> [env-options] [processing-options]
+> bodhi copy <from> <to> [env-options] [processing-options]
 <from>
 ````
 
@@ -236,7 +236,7 @@ The name of the environment that was modified
 #####Signature
 
 ````
-> rbc-cli edit <environment> [env-options] [processing-options]
+> bodhi edit <environment> [env-options] [processing-options]
 <env-name>
 ````
 
@@ -255,7 +255,7 @@ The name of the environment that was removed
 #####Signature
 
 ````
-> rbc-cli remove <environment> [env-options] [processing-options]
+> bodhi remove <environment> [env-options] [processing-options]
 <env-name>
 ````
 
@@ -274,7 +274,7 @@ The name of the environment that is now the default
 #####Signature
 
 ````
-> rbc-cli set-default <environment> [processing-options]
+> bodhi set-default <environment> [processing-options]
 <environment>
 ````
 
@@ -293,7 +293,7 @@ The name of the default environment
 #####Signature
 
 ````
-> rbc-cli get-default <environment> [processing-options]
+> bodhi get-default <environment> [processing-options]
 <environment>
 ````
 ###list
@@ -313,7 +313,7 @@ A JSON array containing the names
 #####Signature
 
 ````
-> rbc-cli list <environment> [processing-options]
+> bodhi list <environment> [processing-options]
 [
   "env",
   "env2"
@@ -337,7 +337,7 @@ A JSON object representation of the current environment.
 #####Signature
 
 ````
-> rbc-cli view <environment> [processing-options]
+> bodhi view <environment> [processing-options]
 {
   "uri":"uri",
   "user":"user",
@@ -369,19 +369,19 @@ These commands have three possible signatures
 Preferred
 
 ````
-> rbc-cli <cmd> <environment> [processing-options]
+> bodhi <cmd> <environment> [processing-options]
 ````
 
 Acceptable
 
 ````
-> rbc-cli <cmd> -e <environment-name>
+> bodhi <cmd> -e <environment-name>
 ````
 
 Default (uses the default environment if set)
 
 ````
-> rbc-cli cmd
+> bodhi cmd
 ````
 
 rbc-types
@@ -391,7 +391,7 @@ Basic command line tool for interacting with the RBC cloud services API
 
 ##Installation & Setup
 
-rbc-types is included in the rbc-cli as a separate executable. To verify the availability of the tool use
+rbc-types is included in the bodhi as a separate executable. To verify the availability of the tool use
 
 ````
 > rbc-types -V
@@ -820,7 +820,7 @@ The typename posted
 
 
 # app-tools
-app-tools is a command line tool, bundled with rbc-cli, that allows app developers to quickly generate
+app-tools is a command line tool, bundled with bodhi, that allows app developers to quickly generate
 an app and publish it to the cloud so that it can be viewed on the mobile container.
 
 
