@@ -1,15 +1,9 @@
-#Overview
+#Getting Started
+This documentation is intended for the developer wanting to integrate into the Bodhi PaaS and SaaS by:
 
-
-BODHI: an Internet-of Things (IoT) Platform-as-a-Service (PaaS) and Software as a Service (SaaS) for sales, inventory, labor, sensor, social data and applications, specific to the operation of restaurant and other service based industries such as retail and hospitality. 
-
-Bodhi integrates with in-store, near-store, above-store systems and other internet based services to deliver real time information, analytics and insight to your users. 
-
-Bodhi delivers a fully extensible, runtime data model with automatic API creation and self generating documentation.
-
-Bodhi provides the software tools and cloud services fro developers (IT, internal and ISV), to build engaging mobile apps for your business needs to deepen understanding of business activity, strengthen customer engagement and help employees do more. 
-
-
+* Building applications to the the Cloud APIs we support
+* Building mobile/html applications either as standalone html applications or to be part of our Mobile Solution provided
+* Building a POS/Data integration application into your point of sale system to be stored and accessed from our cloud solution
 
 #Pre-requisites 
 
@@ -24,12 +18,12 @@ A namespace is your secured storage location of Red book Connect’s cloud solut
 Your namespace utilizes user profiles that are configured by your namespace administrator for different access levels to access your business data (e.g.stores, inventory, labor, and sales data)
 
 ##### Creating your namespace 
-You need to provide two important details for Red Book Connect [Representer ](mailto:ayal.keren@redbookconnect.com):
+You need to provide two important details for Red Book Connect [Representative](mailto:ayal.keren@redbookconnect.com):
 
 * Name
 * Email Address
 
 ####Accessing the API documentation
 
-The API Documentation can be found at here: [https://api.redbookcloud.com/swagger-ui/index.html](https://api.redbookcloud.com/swagger-ui/index.html)
+The API Documentation can be found at here: [https://api.redbookcloud.com/apidocs/index.html](https://api.redbookcloud.com/apidocs/index.html)
 To access them you need to login with your user and password provided by HS.
