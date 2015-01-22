@@ -36,4 +36,6 @@ long | short | arg    | description
 $> npm install agent-cli --help
 ````
 
-
+### Detailed Section 1
+<Provide the general steps or commands an average developer would need to complete to use the application or tool>
+...
