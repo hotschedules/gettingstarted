@@ -189,18 +189,18 @@ At the end of this lab you will have accomplished the following:
 To use the following examples you must set up your project.json file as described in the set up instructions for the Bodhi CLI.
 
 
-bodhi-types --help
-bodhi-types ls
-bodhi-types get team_member
-bodhi-types lp team_member
-bodhi-types new survey --KFC-UK
-bodhi-types set-prop survey name
-bodhi-types set-prop survey name -S
-bodhi-types set-prop survey survey_date -T
-bodhi-types set-prop survey survey_rating -I
-bodhi-types set-prop survey survey_comments -S
-bodhi-types post survey
-bodhi-types get survey 
-bodhi-types gen-instance survey
+bodhi-types --help  
+bodhi-types ls  
+bodhi-types get team_member  
+bodhi-types lp team_member  
+bodhi-types new survey --namespce  
+bodhi-types set-prop survey name  
+bodhi-types set-prop survey name -S  
+bodhi-types set-prop survey survey_date -T  
+bodhi-types set-prop survey survey_rating -I  
+bodhi-types set-prop survey survey_comments -S  
+bodhi-types post survey  
+bodhi-types get survey   
+bodhi-types gen-instance survey  
 
 
