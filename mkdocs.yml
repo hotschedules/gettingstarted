@@ -2,7 +2,7 @@ site_name: Bodhi Development
 pages:
 - ['index.md', 'Home']
 - ['GettingStarted.md', 'Getting Started']
-- ['AgentDevelopment', 'Agent']
+- ['Agent.md', 'Agent']
 - ['API.md', 'Cloud’]
 - ['./AgentApps/CreatingAgentApps.md', 'Writing Agent Apps']
 - ['./AgentApps/Extensions.md', 'Agent App Extensions']
