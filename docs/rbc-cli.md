@@ -820,27 +820,99 @@ The typename posted
 
 
 # app-tools
-app-tools is a command line tool, bundled with bodhi, that allows app developers to quickly generate
+app-tools is a command line tool, bundled with bodhi-cli, that allows app developers to quickly generate
 an app and publish it to the cloud so that it can be viewed on the mobile container.
 
+## App Creation Commands
 
+### new-app
 
-## `app-tools` Commands
-##### `app-tools new-app <app name> [-t (custom (default) || angular) --title --description]`
-This command creates a skeleton app project in the /apps directory of your project. The two skeleton projects to choose
-from are: custom (a vanilla html, css, javascript app) and angular (an angular app with a built-in testing framework using
-jasmine and testem and javascript task runner using grunt).
-##### `app-tools publish-app [-e -n -u -p]`*
-This command publishes the skeleton app to the cloud.
-##### `app-tools list-apps [-e -n -u -p]`*
-This command list all the apps that you can see in your specified environment.
-##### `app-tools add-profile <full profile name> [-e -n -u -p]`*
-This command adds a profile to your app. Users with this profile can then use your app.
-##### `app-tools remove-profile <full profile name> [-e -n -u -p]`*
-This command removes a profile from your app.
-##### `app-tools list-profiles [-e -n -u -p]`*
-This command lists all the profiles that are associated with your app.
+Creates a new app skeleton in /apps folder based on the type of app specified.
 
-*command must be run in the directory of the app you are want to publish/update.
+'''
+    $> app-tools new-app <app-name> [options]
+'''
 
+long | short | arg    | description
+------| --------- | ------ | -------------
+--type | -t | custom (default) || app generator || angular | specifies the type of skeleton project to create
+--title | none | title | specifies the display name of the app
+--description | none | description | specifies the description of the app
+--environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
+--namespace | -n | namespace | specifies the namespace; not needed if environment is specified
+--user | -u | username | specifies the username; not needed if environment is specified
+--password | -p | password | specifies the password; not needed if environment is specified.
 
+##### Custom App
+
+Creates a custom app skeleton in /apps/<app-name>.
+The custom app skeleton just has the required files needed to publish the app.
+
+'''
+    $> app-tools new-app <app-name> [options: --title, --description]
+'''
+
+##### Angular App
+
+Creates an angular app skeleton in /apps/<app-name>.
+
+'''
+    $> app-tools new-app <app-name> -t angular [options: --title, --description]
+'''
+
+##### App Generator
+
+Creates a list-detail app based on the specified type (-m).
+
+'''
+    $> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description, -e, -n, -u, -p]
+'''
+
+## App Publishing Commands
+
+Publishes the app to the cloud. This command must be run in the app folder.
+
+'''
+    $> app-tools publish-app [options]
+'''
+
+long | short | arg    | description
+------| --------- | ------ | -------------
+--environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
+--namespace | -n | namespace | specifies the namespace; not needed if environment is specified
+--user | -u | username | specifies the username; not needed if environment is specified
+--password | -p | password | specifies the password; not needed if environment is specified.
+
+## Informational Commands
+
+Get information about the app.
+
+### list-apps
+
+This command lists all the apps that you can see in your specified environment.
+
+'''
+    $> app-tools list-apps [options]
+'''
+
+long | short | arg    | description
+------| --------- | ------ | -------------
+--environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
+--namespace | -n | namespace | specifies the namespace; not needed if environment is specified
+--user | -u | username | specifies the username; not needed if environment is specified
+--password | -p | password | specifies the password; not needed if environment is specified.
+
+### list-profiles
+
+This command lists all the profiles that are associated with your app. This command must be run in the app folder.
+
+'''
+    $> app-tools list-profiles [option]
+'''
+
+long | short | arg    | description
+------| --------- | ------ | -------------
+--environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
+--namespace | -n | namespace | specifies the namespace; not needed if environment is specified
+--user | -u | username | specifies the username; not needed if environment is specified
+--password | -p | password | specifies the password; not needed if environment is specified.
