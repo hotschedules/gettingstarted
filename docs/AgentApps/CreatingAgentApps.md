@@ -97,7 +97,7 @@ These categories are described below.
 }
 ````
 
-###Descriptive Info
+##1. Descriptive Info
 This contains identification information for your app.
 
 ####Sample
@@ -118,7 +118,7 @@ enabled | Boolean | Preferred | Whether the app is enabled or not
 provider | string | Preferred | Your organization's name
 
 
-###Logger Info
+##2. Logger Info
 
 These properties determine the log filename and amount of detail that would be recorded to the log file. 
 
@@ -138,15 +138,80 @@ level | string | Yes   | Your name for the application |
 version | string | Yes	   | The version number for the application
 
 
-###Settings
-Your app can optionally contain a settings object. These values have the highest precedence in processing the settings.
 
-####Sample
+##3. App Settings
+
+Your app can have settings by declaring them within the settings object. These settings can then be used throughout your application's code. These values will take the highest precedence in the processing of settings. The precedence rules are:
+
+1. App.js settings object (highest precedence)
+2. Any settings within the js/json files in the settings folder
+3. Any settings added by an extension (lowest precedence)
+
+
+###Sample
 ````
-[ {property: 'keys:consumerKey', value: 'wWbo8MBQ0nQ' }]
+[ {property: 'keys:consumerKey', value: 'wWbo8MBQ0nQ' },
+  {property: 'rootPath', value: path.join(process.cwd(), 'input') }]
 ````
 
 Property | Type | Required | Description | 
 ------| --------- | ------ | -------------
 property | string | Yes   | Your name for your property| 
 value | string, function, Boolean, number, object | Yes	   | The value of your setting
+
+
+
+##4. Extensions
+Your application may use one or more extensions. Extensions can provide potential configuration components or actual runtime components. Extensions are a good way to design resuable components that can be shared and reused across projects. 
+
+
+###Sample
+````
+extensions: [ file: {}]
+````
+
+Extensions are loaded in the order in which they are specified. 
+
+##5. Services
+Your app can contain a service. A service is an object that represents a concrete extension of the API.
+
+####Sample
+````
+[ { name: 'keys:consumerKey', value: 'wWbo8MBQ0nQ' },
+  {property: 'rootPath', value: path.join(process.cwd(), 'input') }]
+````
+####Specification
+Property | Type | Required |   Description | 
+------| --------- | ------ | -------------
+name | string | Yes   | Your name of your service | 
+provider | string | Yes	   | A function or reference to a plugin that creates an object
+args | array of strings, functions, objects, booleans | Optional | a list of the dependencies used by the service
+factory | string (constructor, function, literal)| Optional | An enumeration that describes alternate instantiation behavior for the service
+
+####Implicit Properties
+Name | Description |
+------| ---------
+this.name | the name of the service
+this.logger | A reference to the context's logger
+this.publish | a handle to publish a message to the context
+
+
+##6. Sources
+A source is an object that sources external events. By creating a source, you can bind events to listeners and start functions and pipelines once the events have been emitted.
+
+####Sample
+````
+[ {
+   name: 'sampleSource',
+   provider: 'compris:dir',
+   args: ['$settings:rootPath'],
+   bindings: { 'created' : 'read' }
+   } ]
+```` 
+####Specification
+Property | Type | Required |   Description | 
+------| --------- | ------ | -------------
+name | string | Yes   | Your name of your service | 
+provider | string | Yes	   | A function or reference to a plugin that creates an object
+args | array of strings, functions, objects, booleans | Optional | a list of the dependencies used by the service
+factory | string (constructor, function, literal)| Optional | An enumeration that describes alternate instantiation behavior for the service
