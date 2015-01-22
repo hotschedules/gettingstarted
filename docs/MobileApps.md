@@ -5,33 +5,103 @@ Building mobile apps
 ## How Do I Build a Mobile App
 
 ### Set up an environment
-1. `rbc-cli init`
-2. Put in environment credentials to rbc-project.json
+Initiate a rbc-cli project in a new directory.
+```
+$> rbc-cli init
+```
+Put in environment credentials to rbc-project.json. The rbc-project.json file was by the step above.
+```
+$> vi rbc-project.json
+```
 
 ### Create new app
-2. Create a new app project by downloading a project skeleton: `app-tools new-app [APP NAME]` (NOTE: The
-optional flag (-t custom | angular) allows the user to pick between a custom project or an angular project. It defaults to custom if none specified.)
-3. `cd` into your newly created app directory
+
+Create a new app project with a project skeleton in /apps/[APP NAME].
+
+```
+$> app-tools new-app [APP NAME] -t [PROJECT TYPE]
+```
+
+*NOTE: [PROJECT TYPE] should be one of the following values:
+ * custom
+ * angular
+ * app-generator
  
 ### Develop
-4. Develop
-4. Move production ready files into /www directory: `cp * www`. This directory is where production ready code will live.
+
+Start developing your app in /apps/[APP NAME].
+
+### Add Profile
+
+Once you know which types a user would need to use your app, specify the profile definition in your app's package.json. Users that have that profile can use the app.
+
+Example profile attribute in your package.json:
+```
+{
+ ...
+ "profile": {
+  "name": "myAppProfile",
+  "dml": {
+    "Store: {
+     "select": {},
+     "update": {},
+     "insert": {},
+     "delete": {}
+    },
+    "Application": {
+     "select": {},
+     "update": {},
+     "insert": {},
+     "delete": {}
+    }
+  }
+ }
+}
+```
+*NOTE: For the time being, the type Application MUST be included with all the functions (select, update, insert, delete) in order for the user to be able to see the app.
 
 ### Publish
-5. Publish your app: `app-tools publish-app`. This command will zip up whatever is in /www and send it to the cloud.
-6. Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: [API ENDPOINT]/apps/[APP NAME]
+
+Move production ready files into /apps/[APP NAME]/www. This directory is where production ready code will live.
+```
+$> cp * www
+```
+
+Publish your app.
+```
+$> app-tools publish-app
+```
+*NOTE: This command will zip up whatever is in /www and send it to the cloud.
+
+Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: [API ENDPOINT]/apps/[APP NAME]
  
-### Add Profile
-9. Add a profile to your app: `app-tools add-profile [PROFILE]`
-9. See the list of profiles your app is associated with: `app-tools list-profiles`
+### Create a user with the new profile
+
+Create a user with the new profile so that you can see the app.
+
+*NOTE: You need admin rights to create a new user.
+
+```
+$> curl -is -X POST -H Content-Type:application/json -u [USERNAME]:[PASSWORD] -d '{"username":"[NEW USERNAME]","password":"[NEW PASSWORD]","email":"[USER EMAIL]","profiles":["[FULL PROFILE NAME]"]}' [URL]
+```
  
 ### Check you app
-10. View your app in the browser: [API ENDPOINT]/apps/[APP NAME]/index.html (NOTE: you need to be logged in as a user that has the same profile you just assigned to you app.)
+View your app in the browser: [API ENDPOINT]/apps/[APP NAME]/index.html 
+
+*NOTE: you need to be logged in as the user you just created in the above step.
+
+View your app in the container by logging in as the user you just created.
 
 ### Update App
-11. Make further changes to your app: `vi www/index.html` and change something like the word “Welcome” to “Hi” in line 28.
-12. Republish your app: `app-tools publish-app`
-13. Refresh your app in the browser. You should be able to see the changes you just made.
+
+Make further changes to your app.
+
+Republish your app.
+```
+$> app-tools publish-app
+```
+
+Refresh your app in the browser. You should be able to see the changes you just made.
 
 ## Contract
 * html file must be called index.html. It must reside in the root of the app folder.
