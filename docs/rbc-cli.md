@@ -833,6 +833,13 @@ Creates a new app skeleton in /apps folder based on the type of app specified.
     $> app-tools new-app <app-name> [options]
 '''
 
+#### Arguments
+arg | description
+---- | -----------
+<app-name> | unique app name
+
+#### Options
+
 long | short | arg    | description
 ------| --------- | ------ | -------------
 --type | -t | custom (default) || app generator || angular | specifies the type of skeleton project to create
@@ -876,6 +883,7 @@ Publishes the app to the cloud. This command must be run in the app folder.
     $> app-tools publish-app [options]
 '''
 
+#### Options
 long | short | arg    | description
 ------| --------- | ------ | -------------
 --environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
@@ -895,6 +903,7 @@ This command lists all the apps that you can see in your specified environment.
     $> app-tools list-apps [options]
 '''
 
+#### Options
 long | short | arg    | description
 ------| --------- | ------ | -------------
 --environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
@@ -909,7 +918,7 @@ This command lists all the profiles that are associated with your app. This comm
 '''
     $> app-tools list-profiles [option]
 '''
-
+#### Options
 long | short | arg    | description
 ------| --------- | ------ | -------------
 --environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
