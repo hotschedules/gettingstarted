@@ -830,7 +830,7 @@ an app and publish it to the cloud so that it can be viewed on the mobile contai
 Creates a new app skeleton in /apps folder based on the type of app specified.
 
 ```
-    $> app-tools new-app <app-name> [options]
+$> app-tools new-app <app-name> [options]
 ```
 
 #### Arguments
@@ -856,7 +856,7 @@ Creates a custom app skeleton in /apps/\<app-name\>.
 The custom app skeleton just has the required files needed to publish the app.
 
 ```
-    $> app-tools new-app <app-name> [options: --title, --description]
+$> app-tools new-app <app-name> [options: --title, --description]
 ```
 
 ##### Angular App
@@ -864,7 +864,7 @@ The custom app skeleton just has the required files needed to publish the app.
 Creates an angular app skeleton in /apps/\<app-name\>.
 
 ```
-    $> app-tools new-app <app-name> -t angular [options: --title, --description]
+$> app-tools new-app <app-name> -t angular [options: --title, --description]
 ```
 
 ##### App Generator
@@ -872,7 +872,7 @@ Creates an angular app skeleton in /apps/\<app-name\>.
 Creates a list-detail app based on the specified type (-m).
 
 ```
-    $> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description, -e, -n, -u, -p]
+$> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description, -e, -n, -u, -p]
 ```
 
 ## App Publishing Commands
@@ -880,7 +880,7 @@ Creates a list-detail app based on the specified type (-m).
 Publishes the app to the cloud. This command must be run in the app folder.
 
 ```
-    $> app-tools publish-app [options]
+$> app-tools publish-app [options]
 ```
 
 #### Options
@@ -900,7 +900,7 @@ Get information about the app.
 This command lists all the apps that you can see in your specified environment.
 
 ```
-    $> app-tools list-apps [options]
+$> app-tools list-apps [options]
 ```
 
 #### Options
@@ -916,7 +916,7 @@ long | short | arg    | description
 This command lists all the profiles that are associated with your app. This command must be run in the app folder.
 
 ```
-    $> app-tools list-profiles [option]
+$> app-tools list-profiles [option]
 ```
 #### Options
 long | short | arg    | description
