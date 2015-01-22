@@ -2,5 +2,5 @@ site_name: RBC Platform Documentation
 pages:
 - ['index.md','Home']
 - ['GettingStarted.md','Getting Started']
-- ['AgentDevelopment','Agent']
+- ['AgentDevelopment.md','Agent']
 theme: readthedocs
