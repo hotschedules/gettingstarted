@@ -8,30 +8,3 @@ Bodhi integrates with in-store, near-store, above-store systems and other intern
 Bodhi delivers a fully extensible, runtime data model with automatic API creation and self generating documentation.
 
 Bodhi provides the software tools and cloud services for developers, to build engaging mobile apps for your business needs to deepen understanding of your business activity, strengthen customer engagement and help employees do more.
-##Getting Started
-
-# Bodhi Integrated Agent Application Development
-
-## Getting Started
-## Environment Setup
-## Querying
-## Bodhi Agent Tools
-## Bodhi Agent CLI
-## Bodhi Agent Console
-## I want to...
-
-# Bodhi Mobile Development
-
-## Getting Started
-## Environment Setup
-## Bodhi Mobile Application Tools
-## Bodhi Mobile API
-## I want to...
-
-# Bodhi Cloud Development
-## Getting Started
-## Environment Setup
-## Querying
-## Bodhi Cloud APITools
-## Bodhi API
-## I want to...
