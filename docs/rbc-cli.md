@@ -847,9 +847,10 @@ Creates a new app skeleton in /apps folder based on the type of skeleton app spe
 See environment options above (environment options are only needed for app-generator).
 
 Meta Data Options:
+
 long        | short     | arg                                 | meaning
 ----------- | --------- | ----------------------------------- | -------------
-type        | t         | custom  || app generator || angular | specifies the type of skeleton project to create
+type        | t         | custom, app generator, || angular   | specifies the type of skeleton project to create
 title       | none      | title                               | specifies the display name of the app
 description | none      | description                         | specifies the description of the app
 
