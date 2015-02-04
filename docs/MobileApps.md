@@ -72,26 +72,19 @@ $> app-tools new-app [APP NAME] -t [PROJECT TYPE] -m [TYPE NAME (if using app-ge
 
 Start developing your app in /apps/[APP NAME].
 
-### Add a profile
+### Add a type to your app profile
 
-Once you know which types a user would need to use your app, specify the profile definition in your app's package.json. Users that have that profile can use the app.
+Once you know which types a user would need to use your app, edit the app's profile definition. Users that have that profile can use the app.
 
-
-Create a profile entry in the package.json.
 ```
-$> app-tools create-profile [PROFILE NAME]
+$> app-tools add-type-to-profile [TYPE NAME] -s -i -U -d -a
 ```
 
-Add a type to the profile definition and the actions the user is allowed to do on that type.
 * -s = select
 * -i = insert
 * -U = username
 * -d = delete
 * -a = aggregate
-
-```
-$> app-tools add-type-to-profile [TYPE NAME] -s -i -U -d -a
-```
 
 View the definition of the profile.
 
@@ -113,16 +106,12 @@ Example profile attribute in your package.json:
      "delete": {}
     },
     "Application": {
-     "select": {},
-     "update": {},
-     "insert": {},
-     "delete": {}
+     "select": {}
     }
   }
  }
 }
 ```
-*NOTE: For the time being, the type Application MUST be included with all the functions (select, update, insert, delete) in order for the user to be able to see the app.
 
 ### Publish
 
@@ -134,19 +123,11 @@ $> app-tools publish-app
 ```
 *NOTE: This command will zip up whatever is in /www and send it to the cloud.
 
+*NOTE: The profile is automatically assigned to the publisher.
+
 Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: 
 
 [API ENDPOINT]/apps/[APP NAME]
- 
-### Create a user with the new profile
-
-Create a user with the new profile so that you can see the app.
-
-*NOTE: You need admin rights to create a new user.
-
-```
-$> curl -is -X POST -H Content-Type:application/json -u [USERNAME]:[PASSWORD] -d '{"username":"[USER USERNAME]","password":"[USER]","email":"[USER EMAIL]","profiles":["[FULL PROFILE NAME]"]}' [URL]
-```
  
 ### Check your app
 View your app in the browser:
