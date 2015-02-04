@@ -835,7 +835,7 @@ Creates a new app skeleton in /apps folder based on the type of skeleton app spe
 ##### Signature
 
 ```
-$> app-tools new-app <app-name> [meta-data-options] [env-options]
+> app-tools new-app <app-name> [meta-data-options] [env-options]
 ```
 
 ##### Arguments
@@ -862,7 +862,7 @@ Creates a custom app skeleton in /apps/\<app-name\>.
 The custom app skeleton just has the required files needed to publish the app.
 
 ```
-$> app-tools new-app <app-name> [options: --title, --description]
+> app-tools new-app <app-name> [options: --title, --description]
 ```
 
 ##### Angular App
@@ -870,7 +870,7 @@ $> app-tools new-app <app-name> [options: --title, --description]
 Creates an angular app skeleton in /apps/\<app-name\>.
 
 ```
-$> app-tools new-app <app-name> -t angular [options: --title, --description]
+> app-tools new-app <app-name> -t angular [options: --title, --description]
 ```
 
 ##### App Generator
@@ -878,7 +878,7 @@ $> app-tools new-app <app-name> -t angular [options: --title, --description]
 Creates a list-detail app based on the specified type (-m). Environment information is used to grab the type definition remotely from the environment's namespace.
 
 ```
-$> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description] [environment-commands]
+> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description] [env-options]
 ```
 
 ### Profile Definition Commands
@@ -953,7 +953,7 @@ Publishes the app to the cloud. This command must be run in the app folder.
 ##### Signature
 
 ```
-$> app-tools publish-app [env-options]
+> app-tools publish-app [env-options]
 ```
 
 ##### Arguments
@@ -975,7 +975,7 @@ This command lists all the apps that you can see in your specified environment t
 ##### Signature
 
 ```
-$> app-tools list-apps [env-options]
+> app-tools list-apps [env-options]
 ```
 
 ##### Arguments
