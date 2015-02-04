@@ -8,7 +8,7 @@ This tutorial will show you how to quickly create a new app and publish it to th
 
 ### Intended Audience
 
-This tutorial is designed for a new developer looking to create a new app and publish it to the cloud. The tutorial assumes the developer already has npm and node installed on his or her computer. It also assumes the developer already has valid credentials for a namespace.
+This tutorial is designed for a new developer looking to create a new app, publish it to the cloud, and see it in their mobile container. The tutorial assumes the developer already has npm and node installed on his or her computer. It also assumes the developer already has valid credentials for a namespace.
 
 ## How Do I Build a Mobile App
 
@@ -67,22 +67,22 @@ Check to see if we set up the environment correctly.
 
 ### Create a new app
 
-Create a new app project with a project skeleton in /apps/[APP NAME].
+Create a new app project with a project skeleton in /apps/\<app-name\>.
 
 ```
 > app-tools new-app <app-name> -t <project-type> -m <type-name (if -t = app-generator)>
 ```
 
-*NOTE: <project-type> should be one of the following values:
+\<project-type\> should be one of the following values:
  * custom: this will create a very simple skeleton app that uses no frameworks
  * angular: this will create a angular skeleton app
  * app-generator: this will generate a list-detail app that displays the 20 most recent records of the type you specified through the -m flag.
  
-*NOTE: Each project type will have a README.md that further explains how the that skeleton app works. It will exist in the root of the app folder after you run the `new-app` command.
+Each project type will have a README.md that further explains how the that skeleton app works. It will exist in the root of the app folder after you run the `new-app` command.
 
 ### Develop
 
-Start developing your app in /apps/<app-name>.
+Start developing your app in /apps/\<app-name\>.
 
 ### Add a type to your app profile
 
@@ -100,7 +100,7 @@ Type Action Options:
 * -d = delete
 * -a = aggregate
 
-*Note: If you created an app-generator app, the type you specified with the -t flag will be automatically added to the local app profile definition.
+If you created an app-generator app, the type you specified with the -t flag will be automatically added to the local app profile definition.
 
 View the definition of the profile.
 
@@ -131,9 +131,15 @@ Example profile attribute in your package.json:
 
 ### Publish
 
-Move production ready files into /apps/<app-name>/www. This directory is where production ready code will live.
+Move production ready files into /apps/\<app-name\>/www. This directory is where production ready code will live.
 
 If you are using app-generator or angular skeleton app, `grunt prod-build` will do this step for you. Please see their respective README.md files for more information on other helpful grunt commands.
+
+You can only publish an app if you have the admin profile.
+
+The profile is automatically assigned to the publisher.
+
+The app's name has to be unique to the namespace; if it is not, when you publish, app-tools will inform you an app of that name already exists and will ask you whether or not you want to proceed and overwrite the existing app.
 
 Publish your app.
 
@@ -142,18 +148,14 @@ Publish your app.
 ```
 This command will zip up whatever is in /www and send it to the cloud.
 
-*NOTE: You can only publish an app if you have the admin profile.
-
-*NOTE: The profile is automatically assigned to the publisher.
-
 Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: 
 
-<api-endpoint>/apps/<app-name>
+\<api-endpoint\>/apps/\<app-name\>
  
 ### Check your app
 View your app in the browser:
 
-<api-endpoint>/apps/<app-name>/index.html 
+\<api-endpoint\>/apps/\<app-name\>/index.html 
 
 *NOTE: you need to be logged in as the user you just created in the above step.
 
@@ -168,6 +170,8 @@ Republish your app.
 ```
 > app-tools publish-app
 ```
+
+If someone published the same app before you and is listed as the developer in the app's meta data in the cloud, you will be prompted on whether or not you want to overwrite that app. This is to prevent someone accidently overwriting apps.
 
 Refresh your app in the browser. You should be able to see the changes you just made.
 
@@ -184,7 +188,6 @@ Add your app profile to an existing user.
 ## Contract
 * html file must be called index.html. It must reside in the root of the app directory.
 * index.html, LICENSE, and package.json must be in the root of the app directory.
-* If you want to include an app icon for the menu screen,
- icon.* must be located at the root of the app directory.
+* If you want to include an app icon for the menu screen, icon.* must be located at the root of the app directory.
 
  Please see [rbc-cli.md](./rbc-cli.md) for documentation on app-tools commands.
