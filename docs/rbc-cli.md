@@ -846,6 +846,7 @@ Creates a new app skeleton in /apps folder based on the type of skeleton app spe
 
 See environment options above (environment options are only needed for app-generator).
 
+Meta Data Options:
 long        | short     | arg                                 | meaning
 ----------- | --------- | ----------------------------------- | -------------
 type        | t         | custom  || app generator || angular | specifies the type of skeleton project to create
@@ -862,7 +863,7 @@ Creates a custom app skeleton in /apps/\<app-name\>.
 The custom app skeleton just has the required files needed to publish the app.
 
 ```
-> app-tools new-app <app-name> [options: --title, --description]
+> app-tools new-app <app-name> [meta-data-options]
 ```
 
 ##### Angular App
@@ -870,7 +871,7 @@ The custom app skeleton just has the required files needed to publish the app.
 Creates an angular app skeleton in /apps/\<app-name\>.
 
 ```
-> app-tools new-app <app-name> -t angular [options: --title, --description]
+> app-tools new-app <app-name> -t angular [meta-data-options]
 ```
 
 ##### App Generator
@@ -878,7 +879,7 @@ Creates an angular app skeleton in /apps/\<app-name\>.
 Creates a list-detail app based on the specified type (-m). Environment information is used to grab the type definition remotely from the environment's namespace.
 
 ```
-> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description] [env-options]
+> app-tools new-app <app-name> -t app-generator -m <type name> [meta-data-options] [env-options]
 ```
 
 ### Profile Definition Commands
@@ -898,7 +899,7 @@ aggregate | a     | aggregate action allowed on type
 
 #### view-profile
 
-View the local profile definition.
+View the local app profile definition.
 
 ##### Signature
 
@@ -916,11 +917,11 @@ None.
 
 ##### Return
 
-The local profile definition.
+The local app profile definition.
 
 #### add-type-to-profile
 
-Add a type and its allowed actions to the local profile definition.
+Add a type and its allowed actions to the local app profile definition. If the type already exists, it will overwrite it. Application type cannot be edited.
 
 ##### Signature
 
@@ -938,9 +939,29 @@ See profile action options above.
 
 ##### Return
 
-The local profile definition.
+The local app profile definition.
 
 #### remove-type-from-profile
+
+Remove a type from the local app profile definition. Application type cannot be removed.
+
+##### Signature
+
+```
+> app-tools remove-type-from-profile <type>
+```
+
+###### Arguments
+
+1. type
+
+##### Options
+
+None.
+
+##### Return
+
+The local app profile definition.
 
 ## Remote Commands
 
@@ -966,7 +987,7 @@ See environment options above.
 
 ### Informational Commands
 
-Get information about the deployed app.
+Get data about the deployed app from the cloud.
 
 #### list-apps
 
@@ -1013,11 +1034,11 @@ The profile the deployed app is currently associated with.
 
 ### Profile Commands
 
-Remote commands dealing with profiles.
+Remote commands dealing with the profile associated with the deployed app.
 
 #### assign-profile-to-user
 
-Assign a profile to an existing user in the cloud. This command must be run in the app folder.
+Assign the deployed app's profile to an existing user in the cloud. This command must be run in the app folder.
 
 ##### Signature
 
