@@ -32,14 +32,14 @@ Install the tool.
 
 ### Set up your environment
 
-Create a new directory for your rbc-cli project anywhere you want.
+Create a new directory for your bodhi-cli project anywhere you want.
 
 ```
 > mkdir <project-name>
 > cd <project-name>
 ```
 
-Initiate a rbc-cli project in a new directory.
+Initiate a bodhi-cli project in a new directory.
 
 ```
 > bodhi init
