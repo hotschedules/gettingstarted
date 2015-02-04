@@ -889,13 +889,13 @@ The following commands allow the user to edit/view the local profile definition.
 
 #### Profile Action Options
 
-long      | short | meaning
-----      | ----- | -------
-select    | s     | select action allowed on type
-update    | U     | update action allowed on type
-delete    | d     | delete action allowed on type
-insert    | i     | insert action allowed on type
-aggregate | a     | aggregate action allowed on type
+long      | meaning
+----      | -------
+select    | select action allowed on type
+update    | update action allowed on type
+delete    | delete action allowed on type
+insert    | insert action allowed on type
+aggregate | aggregate action allowed on type
 
 
 #### view-profile
