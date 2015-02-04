@@ -89,7 +89,7 @@ Start developing your app in /apps/\<app-name\>.
 Once you know which types a user would need to use your app, edit the app's profile definition. Users that have that profile can use the app.
 
 ```
-> app-tools add-type-to-profile [TYPE NAME] [type-action-options]
+> app-tools add-type-to-profile <type-name> [type-action-options]
 ```
 
 Type Action Options:
@@ -135,18 +135,15 @@ Move production ready files into /apps/\<app-name\>/www. This directory is where
 
 If you are using app-generator or angular skeleton app, `grunt prod-build` will do this step for you. Please see their respective README.md files for more information on other helpful grunt commands.
 
-You can only publish an app if you have the admin profile.
-
-The profile is automatically assigned to the publisher.
-
-The app's name has to be unique to the namespace; if it is not, when you publish, app-tools will inform you an app of that name already exists and will ask you whether or not you want to proceed and overwrite the existing app.
-
 Publish your app.
 
 ```
 > app-tools publish-app
 ```
-This command will zip up whatever is in /www and send it to the cloud.
+
+This command will zip up whatever is in /www and send it to the cloud. This command will also automatically assign the app profile to the publisher.
+
+You can only publish an app if you have the admin profile. The app's name also has to be unique to the namespace; if it is not, when you publish, app-tools will inform you an app of that name already exists and will ask you whether or not you want to proceed and overwrite the existing app.
 
 Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: 
 
