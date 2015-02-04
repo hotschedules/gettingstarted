@@ -819,36 +819,42 @@ upload, push
 The typename posted
 
 
-# app-tools
+app-tools
+=========
 app-tools is a command line tool, bundled with bodhi-cli, that allows app developers to quickly generate
 an app and publish it to the cloud so that it can be viewed on the mobile container.
 
-## App Creation Commands
+## Local Commands
 
-### new-app
+### App Creation Commands
 
-Creates a new app skeleton in /apps folder based on the type of app specified.
+#### new-app
+
+Creates a new app skeleton in /apps folder based on the type of skeleton app specified.
+
+##### Signature
 
 ```
-$> app-tools new-app <app-name> [options]
+$> app-tools new-app <app-name> [meta-data-options] [env-options]
 ```
 
-#### Arguments
-arg | description
----- | -----------
-\<app-name\> | unique app name
+##### Arguments
 
-#### Options
+1. app name (has to be unique to your namespace)
 
-long | short | arg    | description
-------| --------- | ------ | -------------
---type | -t | custom (default) || app generator || angular | specifies the type of skeleton project to create
---title | none | title | specifies the display name of the app
---description | none | description | specifies the description of the app
---environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
---namespace | -n | namespace | specifies the namespace; not needed if environment is specified
---user | -u | username | specifies the username; not needed if environment is specified
---password | -p | password | specifies the password; not needed if environment is specified.
+##### Options
+
+See environment options above (environment options are only needed for app-generator).
+
+long        | short     | arg                                 | meaning
+----------- | --------- | ----------------------------------- | -------------
+type        | t         | custom  || app generator || angular | specifies the type of skeleton project to create
+title       | none      | title                               | specifies the display name of the app
+description | none      | description                         | specifies the description of the app
+
+##### Return
+
+None.
 
 ##### Custom App
 
@@ -869,59 +875,164 @@ $> app-tools new-app <app-name> -t angular [options: --title, --description]
 
 ##### App Generator
 
-Creates a list-detail app based on the specified type (-m).
+Creates a list-detail app based on the specified type (-m). Environment information is used to grab the type definition remotely from the environment's namespace.
 
 ```
-$> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description, -e, -n, -u, -p]
+$> app-tools new-app <app-name> -t angular -m <type name> [options: --title, --description] [environment-commands]
 ```
 
-## App Publishing Commands
+### Profile Definition Commands
+
+The following commands allow the user to edit/view the local profile definition. When the user publishes the app, the cloud will create a unique profile (profile name will be the same as the app name) specifically for this app. Any user with this profile will then be able to use this app.
+
+#### Profile Action Options
+
+long      | short | meaning
+----      | ----- | -------
+select    | s     | select action allowed on type
+update    | U     | update action allowed on type
+delete    | d     | delete action allowed on type
+insert    | i     | insert action allowed on type
+aggregate | a     | aggregate action allowed on type
+
+
+#### view-profile
+
+View the local profile definition.
+
+##### Signature
+
+```
+> app-tools view-profile
+```
+
+##### Arguments
+
+None.
+
+##### Options
+
+None.
+
+##### Return
+
+The local profile definition.
+
+#### add-type-to-profile
+
+Add a type and its allowed actions to the local profile definition.
+
+##### Signature
+
+```
+> app-tools add-type-to-profile <type> [profile-action-options]
+```
+
+##### Arguments
+
+1. type
+
+##### Options
+
+See profile action options above.
+
+##### Return
+
+The local profile definition.
+
+#### remove-type-from-profile
+
+## Remote Commands
+
+### App Publishing Commands
+
+#### publish-app
 
 Publishes the app to the cloud. This command must be run in the app folder.
 
-```
-$> app-tools publish-app [options]
-```
-
-#### Options
-long | short | arg    | description
-------| --------- | ------ | -------------
---environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
---namespace | -n | namespace | specifies the namespace; not needed if environment is specified
---user | -u | username | specifies the username; not needed if environment is specified
---password | -p | password | specifies the password; not needed if environment is specified.
-
-## Informational Commands
-
-Get information about the app.
-
-### list-apps
-
-This command lists all the apps that you can see in your specified environment.
+##### Signature
 
 ```
-$> app-tools list-apps [options]
+$> app-tools publish-app [env-options]
 ```
 
-#### Options
-long | short | arg    | description
-------| --------- | ------ | -------------
---environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
---namespace | -n | namespace | specifies the namespace; not needed if environment is specified
---user | -u | username | specifies the username; not needed if environment is specified
---password | -p | password | specifies the password; not needed if environment is specified.
+##### Arguments
 
-### list-profiles
+None.
 
-This command lists all the profiles that are associated with your app. This command must be run in the app folder.
+##### Options
+
+See environment options above.
+
+### Informational Commands
+
+Get information about the deployed app.
+
+#### list-apps
+
+This command lists all the apps that you can see in your specified environment that are currently deployed in the cloud.
+
+##### Signature
 
 ```
-$> app-tools list-profiles [option]
+$> app-tools list-apps [env-options]
 ```
-#### Options
-long | short | arg    | description
-------| --------- | ------ | -------------
---environment | -e | environment name | specifies the environment defined in rbc-project.json; not needed if using the default
---namespace | -n | namespace | specifies the namespace; not needed if environment is specified
---user | -u | username | specifies the username; not needed if environment is specified
---password | -p | password | specifies the password; not needed if environment is specified.
+
+##### Arguments
+
+None.
+
+##### Options
+
+See environment options above.
+
+##### Return
+
+A list of apps currently in the cloud. Each app entry will show its meta data.
+
+#### list-profile
+
+This command shows the profile that is associated with your deployed app. This command must be run in the app folder.
+
+##### Signature
+
+```
+$> app-tools list-profile [env-option]
+```
+##### Arguments
+
+None.
+
+##### Options
+
+See environment options above.
+
+##### Return
+
+The profile the deployed app is currently associated with.
+
+### Profile Commands
+
+Remote commands dealing with profiles.
+
+#### assign-profile-to-user
+
+Assign a profile to an existing user in the cloud. This command must be run in the app folder.
+
+##### Signature
+
+```
+> app-tools assign-profile-to-user <username> [env-options]
+```
+
+##### Arguments
+
+1. username
+
+##### Options
+
+See environment options above.
+
+##### Return
+
+The user definition.
