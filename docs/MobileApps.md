@@ -42,7 +42,7 @@ Create a new directory for your rbc-cli project anywhere you want.
 Initiate a rbc-cli project in a new directory.
 
 ```
-> rbc-cli init
+> bodhi init
 ```
 
 Put in environment credentials to rbc-project.json. The rbc-project.json file was created by the step above.
