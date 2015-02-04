@@ -38,38 +38,36 @@ $> rbc-cli init
 ```
 Put in environment credentials to rbc-project.json. The rbc-project.json file was created by the step above.
 ```
-$> vi rbc-project.json
-```
-Example:
-```
-{
-  "version": "0.6.8",
-  "environments": {
-        "environmentName": {
-            "uri": "https://myendpoint.rbcplatform.com/",
-            "user": "myuser",
-            "password": "mypassword",
-            "namespace": "mynamespace"
-        }
-   },
-    "default": "environmentName"
-}
+$> bodhi new <environment> -s <api endpoint> -n <namespace> -u <username> -p <password>
 ```
 
+Check to see if we set up the environment correctly.
+
+```
+$> bodhi view <environment>
+{
+  "uri":<uri>,
+  "user":<username>,
+  "password":<password>,
+  "namespace":<namespace>
+}
+```
 
 ### Create a new app
 
 Create a new app project with a project skeleton in /apps/[APP NAME].
 
 ```
-$> app-tools new-app [APP NAME] -t [PROJECT TYPE]
+$> app-tools new-app [APP NAME] -t [PROJECT TYPE] -m [TYPE NAME (if using app-generator)]
 ```
 
 *NOTE: [PROJECT TYPE] should be one of the following values:
- * custom
- * angular
- * app-generator
+ * custom: this will create a very simple skeleton app that uses no frameworks
+ * angular: this will create a angular skeleton app
+ * app-generator: this will generate a list-detail app that displays 20 records of the type you specified through the -m flag.
  
+*NOTE: Each project type will have a README.md that further explains how the that skeleton app works. It will exist in the root of the app folder after you run the `new-app` command.
+
 ### Develop
 
 Start developing your app in /apps/[APP NAME].
@@ -77,6 +75,29 @@ Start developing your app in /apps/[APP NAME].
 ### Add a profile
 
 Once you know which types a user would need to use your app, specify the profile definition in your app's package.json. Users that have that profile can use the app.
+
+
+Create a profile entry in the package.json.
+```
+$> app-tools create-profile [PROFILE NAME]
+```
+
+Add a type to the profile definition and the actions the user is allowed to do on that type.
+* -s = select
+* -i = insert
+* -U = username
+* -d = delete
+* -a = aggregate
+
+```
+$> app-tools add-type-to-profile [TYPE NAME] -s -i -U -d -a
+```
+
+View the definition of the profile.
+
+```
+$> app-tools view-profile
+```
 
 Example profile attribute in your package.json:
 ```
