@@ -1,3 +1,9 @@
+---
+title: "Camera"
+posted: 2014-01-30
+post: true
+---
+
 # Camera Module Reference
 
 ## Overview
