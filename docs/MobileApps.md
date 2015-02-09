@@ -94,11 +94,11 @@ Once you know which types a user would need to use your app, edit the app's prof
 
 Type Action Options:
 
-* -s = select
-* -i = insert
-* -U = username
-* -d = delete
-* -a = aggregate
+* --select
+* --insert
+* --username
+* --delete
+* --aggregate
 
 If you created an app-generator app, the type you specified with the -t flag will be automatically added to the local app profile definition.
 
