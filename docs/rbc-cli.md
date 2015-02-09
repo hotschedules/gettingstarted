@@ -830,7 +830,13 @@ an app and publish it to the cloud so that it can be viewed on the mobile contai
 
 #### new-app
 
-Creates a new app skeleton in /apps folder based on the type of skeleton app specified.
+Creates a new app skeleton in /apps folder based on the type of skeleton app specified. 
+
+Notes:
+
+* App name must be unique to the namespace.
+* The app's profile name is the same as the app name.
+* Once app name and profile name has been specified, it cannot be changed.
 
 ##### Signature
 
@@ -840,7 +846,7 @@ Creates a new app skeleton in /apps folder based on the type of skeleton app spe
 
 ##### Arguments
 
-1. app name (has to be unique to your namespace)
+1. app name
 
 ##### Options
 
@@ -850,9 +856,8 @@ Meta Data Options:
 
 long        | short     | arg                                 | meaning
 ----------- | --------- | ----------------------------------- | -------------
-type        | t         | custom, app generator, || angular   | specifies the type of skeleton project to create
-title       | none      | title                               | specifies the display name of the app
-description | none      | description                         | specifies the description of the app
+type        | t         | custom (default), app generator, angular   | specifies the type of skeleton project to create
+model       | m         | resource type                       | specifies the resource type for the app generator function
 
 ##### Return
 
@@ -877,7 +882,12 @@ Creates an angular app skeleton in /apps/\<app-name\>.
 
 ##### App Generator
 
-Creates a list-detail app based on the specified type (-m). Environment information is used to grab the type definition remotely from the environment's namespace.
+Creates a list-detail app based on the specified type (-m). The app will list the 20 most recent records fo the specified type. The user can then drill down and see the record in more detail. 
+
+Notes:
+
+* Environment information is used to grab the type definition remotely from the environment's namespace.
+* The model with the select action (specified by the -m flag) will be added to the profile definition upon app creation.
 
 ```
 > app-tools new-app <app-name> -t app-generator -m <type name> [meta-data-options] [env-options]
@@ -963,6 +973,8 @@ None.
 ##### Return
 
 The local app profile definition.
+
+### App Metadata Commands
 
 #### edit-title
 
@@ -1102,7 +1114,17 @@ The app version.
 
 #### publish-app
 
-Publishes the app to the cloud. This command must be run in the app folder.
+Publishes the app to the namespace specified by the environment. This command must be run in the app folder.
+
+Notes:
+
+* Publish-ready app files must be located in a /www folder in the root of the app directory so that the publish-app command can zip it up and send it to the cloud.
+* Need to have version, name, profile, and title specified in the package.json when publishing (use the app metadata commands and profile commands above to do this).
+* LICENSE, index.html, and package.json are required and must be located in the root of the app directory.
+* Only users with the admin profile are allowed to publish apps.
+* Max zip file size is 20mb.
+* Max number of files is 1024.
+* On publish, the cloud creates the profile specified by the package.json's profile definition and then assigns the profile to the developer who published the app.
 
 ##### Signature
 
@@ -1117,6 +1139,10 @@ None.
 ##### Options
 
 See environment options above.
+
+###### Return
+
+Message stating the app has been published, profile has been created and assigned to the developer who published it.
 
 ### Informational Commands
 
