@@ -898,14 +898,14 @@ insert    | insert action allowed on type
 aggregate | aggregate action allowed on type
 
 
-#### view-profile
+#### view-profile-def
 
 View the local app profile definition.
 
 ##### Signature
 
 ```
-> app-tools view-profile
+> app-tools view-profile-def
 ```
 
 ##### Arguments
@@ -963,6 +963,138 @@ None.
 ##### Return
 
 The local app profile definition.
+
+#### edit-title
+
+Edit the app title.
+
+##### Signature
+
+```
+> app-tools edit-title <title>
+```
+
+##### Arguments
+
+1. title
+
+##### Options
+
+None.
+
+##### Return
+
+Message stating the title has been changed to <title>.
+
+#### view-title
+
+View the app title.
+
+##### Signature
+
+```
+> app-tools view-title
+```
+
+##### Arguments
+
+None.
+
+##### Options
+
+None.
+
+##### Return
+
+The app title.
+
+#### edit-description
+
+Edit the app description.
+
+##### Signature
+
+```
+> app-tools edit-description <description>
+```
+
+##### Arguments
+
+1. description
+
+##### Options
+
+None.
+
+##### Return
+
+Message stating description has been changed.
+
+#### view-description
+
+View the app description.
+
+##### Signature
+
+```
+> app-tools view-description
+```
+
+##### Arguments
+
+None.
+
+##### Options
+
+None.
+
+##### Return
+
+The app description.
+
+#### edit-version
+
+Edit the app version.
+
+##### Signature
+
+```
+> app-tools edit-version <version>
+```
+
+##### Arguments
+
+1. version
+
+##### Options
+
+None.
+
+##### Return
+
+Message stating the app version has been changed to <version>.
+
+#### view-version
+
+View the app version.
+
+##### Signature
+
+```
+> app-tools view-version
+```
+
+##### Arguments
+
+1. version
+
+##### Options
+
+None.
+
+##### Return
+
+The app version.
 
 ## Remote Commands
 
