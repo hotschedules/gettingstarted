@@ -1040,7 +1040,7 @@ None.
 
 ##### Return
 
-Message stating description has been changed.
+Message stating description has been changed to \<description\>.
 
 #### view-description
 
