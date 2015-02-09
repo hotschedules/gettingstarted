@@ -1012,14 +1012,14 @@ See environment options above.
 
 A list of apps currently in the cloud. Each app entry will show its meta data.
 
-#### list-profile
+#### get-profile
 
 This command shows the profile that is associated with your deployed app. This command must be run in the app folder.
 
 ##### Signature
 
 ```
-$> app-tools list-profile [env-option]
+$> app-tools get-profile [env-option]
 ```
 ##### Arguments
 
