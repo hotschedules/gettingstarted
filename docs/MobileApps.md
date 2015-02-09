@@ -105,7 +105,7 @@ If you created an app-generator app, the type you specified with the -t flag wil
 View the definition of the profile.
 
 ```
-> app-tools view-profile
+> app-tools view-profile-def
 ```
 
 Example profile attribute in your package.json:
