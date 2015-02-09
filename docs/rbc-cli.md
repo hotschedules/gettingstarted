@@ -996,7 +996,7 @@ None.
 
 ##### Return
 
-Message stating the title has been changed to <title>.
+Message stating the title has been changed to \<title\>.
 
 #### view-title
 
@@ -1084,7 +1084,7 @@ None.
 
 ##### Return
 
-Message stating the app version has been changed to <version>.
+Message stating the app version has been changed to \<version\>.
 
 #### view-version
 
