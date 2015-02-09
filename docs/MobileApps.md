@@ -138,7 +138,7 @@ If you are using app-generator or angular skeleton app, `grunt prod-build` will 
 Publish your app.
 
 ```
-> app-tools publish-app
+> app-tools publish-app [env-options]
 ```
 
 This command will zip up whatever is in /www and send it to the cloud. This command will also automatically assign the app profile to the publisher.
@@ -165,7 +165,7 @@ Make further changes to your app.
 Republish your app.
 
 ```
-> app-tools publish-app
+> app-tools publish-app [env-options]
 ```
 
 If someone published the same app before you and is listed as the developer in the app's meta data in the cloud, you will be prompted on whether or not you want to overwrite that app. This is to prevent someone accidently overwriting apps.
