@@ -1140,7 +1140,7 @@ None.
 
 See environment options above.
 
-###### Return
+##### Return
 
 Message stating the app has been published, profile has been created and assigned to the developer who published it.
 
