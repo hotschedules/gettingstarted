@@ -143,7 +143,7 @@ Publish your app.
 
 This command will zip up whatever is in /www and send it to the cloud. This command will also automatically assign the app profile to the publisher.
 
-You can only publish an app if you have the admin profile. The app's name also has to be unique to the namespace; if it is not, when you publish, app-tools will inform you an app of that name already exists and will ask you whether or not you want to proceed and overwrite the existing app.
+You can only publish an app if you have the admin profile. The app's name also has to be unique to the namespace; if it is not and if you are not listed as the developer of the existing app, when you publish, app-tools will inform you an app of that name already exists and will ask you whether or not you want to proceed and overwrite the existing app. If you are listed as the developer of the existing app, app-tools will publish your new app and overwrite the existing app in the cloud.
 
 Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: 
 
