@@ -147,12 +147,12 @@ You can only publish an app if you have the admin profile. The app's name also h
 
 Check to make sure your app was uploaded by checking if the cloud has created a record for your app. In your browser go to the following link: 
 
-\<api-endpoint\>/apps/\<app-name\>
+\<api-endpoint\>/\<namespace\>/apps/\<app-name\>
  
 ### Check your app
 View your app in the browser:
 
-\<api-endpoint\>/apps/\<app-name\>/index.html 
+\<api-endpoint\>/apps/\<namespace\>/\<app-name\>/index.html 
 
 *NOTE: you need to be logged in as the user you just created in the above step.
 
