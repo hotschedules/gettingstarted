@@ -63,7 +63,7 @@ Check to see if we set up the environment correctly.
 }
 ```
 
-*Check out other environment commands [here](../rbc-cli.md).
+*Check out other environment commands [here](rbc-cli.md).
 
 ### Create a new app
 
@@ -187,4 +187,4 @@ Add your app profile to an existing user.
 * index.html, LICENSE, and package.json must be in the root of the app directory.
 * If you want to include an app icon for the menu screen, icon.* must be located at the root of the app directory.
 
- Please see rbc-cli for documentation on app-tools commands.
+ Please see [rbc-cli.md](rbc-cli.md) for documentation on app-tools commands.
