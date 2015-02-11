@@ -187,4 +187,4 @@ Add your app profile to an existing user.
 * index.html, LICENSE, and package.json must be in the root of the app directory.
 * If you want to include an app icon for the menu screen, icon.* must be located at the root of the app directory.
 
- Please see [rbc-cli.md](./rbc-cli.md) for documentation on app-tools commands.
+ Please see [rbc-cli.md](rbc-cli.md) for documentation on app-tools commands.
