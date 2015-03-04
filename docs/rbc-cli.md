@@ -1177,11 +1177,11 @@ Message stating the app has been successfully removed.
 
 #### install-app
 
-Install a global app into custom namespace.
+Install a global app into a custom namespace.
 
 Note:
 
-* --name flag is optional. If name is not specified, it defaults to the original name specified by the publisher (if the app's global name is testNamespace.appname, appname will be the name given to the app in your namespace).
+* --name flag is optional. If name is not specified, it defaults to the original name specified by the publisher (ex. if the app's global name is testNamespace.appname, appname will be the name given to the app in your namespace).
 * An app can be installed into a namespace multiple times as long as the name given to the app (specified by the --name flag) is unique.
 
 ##### Signature
@@ -1213,7 +1213,7 @@ Update an already installed global app.
 ##### Signature
 
 ```
-> app-tools update-app <app name> [env-options]
+> app-tools update-app <app-name> [env-options]
 ```
 
 ##### Arguments
@@ -1234,7 +1234,7 @@ Get data about the deployed app from the cloud.
 
 #### list-apps
 
-This command lists all the apps that you can see in your specified environment that are currently deployed in the cloud. If the -g flag is specified, the command lists all the global apps available for your to install.
+This command lists all the apps that you can see in your specified environment that are currently deployed in the cloud. If the -g flag is specified, the command lists all the global apps available for you to install.
 
 ##### Signature
 
@@ -1256,7 +1256,7 @@ global      | g         |    | list the global apps
 
 ##### Return
 
-A list of apps currently in the cloud. Each app entry will show its meta data.
+A list of apps currently in your namespace or if the -g flag is specified the apps currently in the global store. Each app entry will show its meta data.
 
 #### get-profile
 
