@@ -1125,6 +1125,7 @@ Notes:
 * Max zip file size is 20mb.
 * Max number of files is 1024.
 * On publish, the cloud creates the profile specified by the package.json's profile definition and then assigns the profile to the developer who published the app.
+* If autoVersionUpdate flag in package.json is set to true, each publish will bump up the patch version of the app.
 
 ##### Signature
 
@@ -1156,33 +1157,76 @@ Remove app from the cloud.
 
 ##### Signature
 
+```
+> app-tools remove-app [env-options]
+```
+
 ##### Arguments
+
+None.
 
 ##### Options
 
+See environment options above.
+
 ##### Return
 
-### Global App Commands
+Message stating the app has been successfully removed.
+
+### Global App Instalation/Update Commands
 
 #### install-app
 
+Install a global app into custom namespace.
+
+Note:
+
+* --name flag is optional. If name is not specified, it defaults to the original name specified by the publisher (if the app's global name is testNamespace.appname, appname will be the name given to the app in your namespace).
+* An app can be installed into a namespace multiple times as long as the name given to the app (specified by the --name flag) is unique.
+
 ##### Signature
+
+```
+> app-tools install-app <global app name> --name <app name> [env-options]
+```
 
 ##### Arguments
 
+1. global app name
+
 ##### Options
 
+See environment options above.
+
+long        | short     | arg                                 | meaning
+----------- | --------- | ----------------------------------- | -------------
+name        |          |    | unique name of the app for your namespace
+
 ##### Return
+
+The metadata for the newly installed global app.
 
 #### update-app
 
+Update an already installed global app.
+
 ##### Signature
+
+```
+> app-tools update-app <app name> [env-options]
+```
 
 ##### Arguments
 
+1. app name
+
 ##### Options
 
+See environment options above.
+
 ##### Return
+
+The metadata for the updated global app.
 
 ### Informational Commands
 
