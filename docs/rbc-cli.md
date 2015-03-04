@@ -1265,7 +1265,7 @@ This command shows the profile that is associated with your deployed app. This c
 ##### Signature
 
 ```
-$> app-tools get-profile [env-option]
+> app-tools get-profile [env-option]
 ```
 ##### Arguments
 
