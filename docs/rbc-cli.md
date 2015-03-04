@@ -1114,7 +1114,7 @@ The app version.
 
 #### publish-app
 
-Publishes the app to the namespace specified by the environment. This command must be run in the app folder.
+Publishes the app to the namespace specified by the environment or to the global app store if the -g flag is specified. This command must be run in the app folder.
 
 Notes:
 
@@ -1140,9 +1140,49 @@ None.
 
 See environment options above.
 
+long        | short     | arg                                 | meaning
+----------- | --------- | ----------------------------------- | -------------
+global        | g         |    | publish to global namespace
+
 ##### Return
 
 Message stating the app has been published, profile has been created and assigned to the developer who published it.
+
+### App Removing Commands
+
+#### remove-app
+
+Remove app from the cloud.
+
+##### Signature
+
+##### Arguments
+
+##### Options
+
+##### Return
+
+### Global App Commands
+
+#### install-app
+
+##### Signature
+
+##### Arguments
+
+##### Options
+
+##### Return
+
+#### update-app
+
+##### Signature
+
+##### Arguments
+
+##### Options
+
+##### Return
 
 ### Informational Commands
 
