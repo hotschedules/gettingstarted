@@ -1126,6 +1126,7 @@ Notes:
 * Max number of files is 1024.
 * On publish, the cloud creates the profile specified by the package.json's profile definition and then assigns the profile to the developer who published the app.
 * If autoVersionUpdate flag in package.json is set to true, each publish will bump up the patch version of the app.
+* If you want to publish the app globally, the app must already be published in your custom namespace.
 
 ##### Signature
 
