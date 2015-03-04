@@ -1234,12 +1234,12 @@ Get data about the deployed app from the cloud.
 
 #### list-apps
 
-This command lists all the apps that you can see in your specified environment that are currently deployed in the cloud.
+This command lists all the apps that you can see in your specified environment that are currently deployed in the cloud. If the -g flag is specified, the command lists all the global apps available for your to install.
 
 ##### Signature
 
 ```
-> app-tools list-apps [env-options]
+> app-tools list-apps -g [env-options]
 ```
 
 ##### Arguments
@@ -1249,6 +1249,10 @@ None.
 ##### Options
 
 See environment options above.
+
+long        | short     | arg                                 | meaning
+----------- | --------- | ----------------------------------- | -------------
+global      | g         |    | list the global apps
 
 ##### Return
 
