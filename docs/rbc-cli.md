@@ -1159,12 +1159,12 @@ Remove app from the cloud.
 ##### Signature
 
 ```
-> app-tools remove-app [env-options]
+> app-tools remove-app <app-name> [env-options]
 ```
 
 ##### Arguments
 
-None.
+1. app name
 
 ##### Options
 
