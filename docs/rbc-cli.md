@@ -1259,27 +1259,6 @@ global      | g         |    | list the global apps
 
 A list of apps currently in your namespace or if the -g flag is specified the apps currently in the global store. Each app entry will show its meta data.
 
-#### get-profile
-
-This command shows the profile that is associated with your deployed app. This command must be run in the app folder.
-
-##### Signature
-
-```
-> app-tools get-profile [env-option]
-```
-##### Arguments
-
-None.
-
-##### Options
-
-See environment options above.
-
-##### Return
-
-The profile the deployed app is currently associated with.
-
 ### Profile Commands
 
 Remote commands dealing with the profile associated with the deployed app.
