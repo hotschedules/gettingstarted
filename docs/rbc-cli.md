@@ -1265,12 +1265,12 @@ Remote commands dealing with the profile associated with the deployed app.
 
 #### assign-profile-to-user
 
-Assign the deployed app's profile to an existing user in the cloud. This command must be run in the app folder.
+Assign the deployed app's profile to an existing user in the cloud.
 
 ##### Signature
 
 ```
-> app-tools assign-profile-to-user <username> [env-options]
+> app-tools assign-profile-to-user <username> --name <app-name> [env-options]
 ```
 
 ##### Arguments
@@ -1279,8 +1279,12 @@ Assign the deployed app's profile to an existing user in the cloud. This command
 
 ##### Options
 
+long        | short     | arg                                 | meaning
+----------- | --------- | ----------------------------------- | -------------
+name      |          |  app name  | Name of the app's profile you wish to assign the user.
+
 See environment options above.
 
 ##### Return
 
-The user definition.
+Message stating the specified app's profile has been assigned to the specified user.
